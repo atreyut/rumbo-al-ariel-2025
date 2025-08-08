@@ -2736,15 +2736,18 @@ function buscarPelicula() {
   const titulo = document.getElementById("peliculaSelect").value;
   const peli = peliculas[titulo];
   if (!peli) return;
+
   const encabezado = [
     {
       "Película": titulo,
       "Director": peli.director,
       "Estreno": peli.estreno,
       "Duración": peli.duracion,
-      "Sinopsis": peli.sinopsis
+      "Sinopsis": peli.sinopsis,
+      "Categorias": peli.categoria || []
     }
   ];
+
   const res = peli.proyecciones.map(pr => {
     const s = sedes[pr.sede_id];
     const { fecha, hora, fechaISO } = timestampToFechaHora(pr.timestamp);
@@ -2757,11 +2760,19 @@ function buscarPelicula() {
     };
   }).sort((a, b) => a.FechaISO.localeCompare(b.FechaISO) || a.Hora.localeCompare(b.Hora));
 
-  // Mostrar encabezado arriba como bloque y después tabla solo de proyecciones
   const table = document.getElementById("resultadosTable");
   table.innerHTML = "";
 
-  const encRow = `<tr><td colspan='4'><strong>${encabezado[0].Película}</strong><br>${encabezado[0].Director} | ${encabezado[0].Estreno} | ${encabezado[0].Duración}<br>🎬 ${encabezado[0].Sinopsis}</td></tr>`;
+  const categoriasText = encabezado[0].Categorias.length > 0
+    ? `<br><strong>Nominada a:</strong><br>` + encabezado[0].Categorias.map(cat => `🏆 ${cat}`).join('<br>')
+    : "";
+
+  const encRow = `<tr><td colspan='4'>
+    <strong>${encabezado[0].Película}</strong><br>
+    ${encabezado[0].Director} | ${encabezado[0].Estreno} | ${encabezado[0].Duración}<br>
+    🎬 ${encabezado[0].Sinopsis}
+    ${categoriasText}
+    </td></tr>`;
 
   if (res.length === 0) {
     table.innerHTML = encRow + '<tr><td colspan="4">No hay funciones para esta película.</td></tr>';
@@ -2769,11 +2780,12 @@ function buscarPelicula() {
   }
 
   const thead = `<tr><th>Sede</th><th>Dirección</th><th>Fecha</th><th>Hora</th></tr>`;
-  const tbody = res.map(r => `<tr><td>${r.Sede}</td><td>${r.Dirección}</td><td>${r.Fecha}</td><td>${r.Hora}</td></tr>`).join('');
+  const tbody = res.map(r =>
+    `<tr><td>${r.Sede}</td><td>${r.Dirección}</td><td>${r.Fecha}</td><td>${r.Hora}</td></tr>`
+  ).join('');
 
   table.innerHTML = encRow + thead + tbody;
 }
-
 
 function actualizarSedesPorEstado() {
   const estado = document.getElementById("estadoSedeSelect").value;
