@@ -79,6 +79,7 @@
   <button onclick="showTab('fechaTab')">🔎 Buscar por fecha y estado</button>
   <button onclick="showTab('peliculaTab')">🎞️ Buscar por película</button>
   <button onclick="showTab('sedeTab')">📍 Buscar por sede</button>
+  <button onclick="showTab('categoriaTab')">🏆 Buscar por categoría</button>
 </div>
 
 <div id="fechaTab" class="tab active">
@@ -99,6 +100,12 @@
   <select id="estadoSedeSelect" onchange="actualizarSedesPorEstado()"></select>
   <select id="sedeSelect"></select>
   <button onclick="buscarPorSede()">Buscar</button>
+</div>
+
+<div id="categoriaTab" class="tab">
+  <h3>Buscar por categoría</h3>
+  <select id="categoriaSelect"></select>
+  <button onclick="buscarPorCategoria()">Buscar</button>
 </div>
 
 <div class="table-container">
@@ -435,6 +442,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-14T15:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Animación"
       ]
     },
     "anónima inmensidad": {
@@ -471,6 +481,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-12T18:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje Documental"
       ]
     },
     "Arillo de hombre muerto": {
@@ -491,6 +504,10 @@ const data = {
           "sede_id": "s09",
           "timestamp": "2025-08-12T12:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Actriz",
+        "Mejor Coactuación Masculina"
       ]
     },
     "Armas Blancas": {
@@ -523,6 +540,9 @@ const data = {
           "sede_id": "s37",
           "timestamp": "2025-09-15T11:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Revelación Actoral"
       ]
     },
     "Buscando un burro": {
@@ -559,6 +579,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-12T18:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje Documental"
       ]
     },
     "Casi el paraíso": {
@@ -566,7 +589,10 @@ const data = {
       "estreno": "2024",
       "duracion": "114 min.",
       "sinopsis": "Ugo Conti, joven y hermoso aristócrata, influencer, llega a México donde rápidamente encanta y seduce a la alta sociedad Mexicana, en tanto se reencuentra con el amor de su pasado, Frida Becker, siguiéndola, terminará en el centro de una lucha por el poder político y cuando Ugo caiga del pedestal, la misma sociedad que lo encumbró y se inclinó ante él, lo destruirá.",
-      "proyecciones": []
+      "proyecciones": [],
+      "categoria": [
+        "Mejor Guion Adaptado"
+      ]
     },
     "Concierto para otras manos": {
       "director": "Ernesto González Díaz",
@@ -594,6 +620,9 @@ const data = {
           "sede_id": "s47",
           "timestamp": "2025-09-19T17:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Largometraje Documental"
       ]
     },
     "Corina": {
@@ -670,6 +699,16 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-16T18:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Dirección",
+        "Mejor Actriz",
+        "Mejor Coactuación Femenina",
+        "Mejor Guion Original",
+        "Mejor Música Original",
+        "Mejor Vestuario",
+        "Mejor Diseño de Arte",
+        "Mejor Ópera Prima"
       ]
     },
     "Dolores": {
@@ -742,6 +781,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-14T15:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Animación"
       ]
     },
     "el 47": {
@@ -749,7 +791,10 @@ const data = {
       "estreno": "2024",
       "duracion": "110 min.",
       "sinopsis": "\"El 47\" cuenta la historia de un acto de disidencia pacífica y el movimiento vecinal de base que en 1978 transformó Barcelona y cambió la imagen de sus suburbios para siempre. Manolo Vital, un conductor de autobús que se adueñaba del bus de la línea 47 para desmontar una mentira que el Ayuntamiento se empeñaba en repetir: los autobuses no podían subir las cuestas del distrito de Torre Baró. Un acto de rebeldía que demostró ser un catalizador para el cambio, de que las personas se enorgullecen de sus raíces, de una lucha del vecindario, de la clase trabajadora que ayudó a crear la Barcelona moderna de los años 70.",
-      "proyecciones": []
+      "proyecciones": [],
+      "categoria": [
+        "Mejor Película Iberoamericana"
+      ]
     },
     "El grosor del polvo": {
       "director": "Jonathan Hernández",
@@ -785,6 +830,9 @@ const data = {
           "sede_id": "s47",
           "timestamp": "2025-09-20T17:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Ópera Prima"
       ]
     },
     "El Guardián de las Monarcas": {
@@ -873,6 +921,9 @@ const data = {
           "sede_id": "s30",
           "timestamp": "2025-09-07T14:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Largometraje Documental"
       ]
     },
     "El Jockey": {
@@ -880,7 +931,10 @@ const data = {
       "estreno": "2024",
       "duracion": "96 min.",
       "sinopsis": "Remo Manfredini es una leyenda del turf, pero su conducta excéntrica y autodestructiva comienza a eclipsar su talento. Abril, jocketa y pareja de Remo, espera un hijo suyo y debe decidir entre continuar con su embarazo o seguir corriendo. Ambos corren caballos para Sirena, un empresario obsesionado con el jockey.  Un día Remo sufre un accidente, desaparece del hospital y deambula sin identidad por las calles de Buenos Aires. Sirena lo quiere vivo o muerto mientras Abril intenta encontrarlo antes de que sea demasiado tarde. Para cuando lo encuentren, Remo se habrá transformado en Dolores, una enigmática y encantadora mujer.",
-      "proyecciones": []
+      "proyecciones": [],
+      "categoria": [
+        "Mejor Película Iberoamericana"
+      ]
     },
     "EL LADRÓN DE PERROS": {
       "director": "Vinko Tomicic Salinas",
@@ -920,6 +974,9 @@ const data = {
           "sede_id": "s54",
           "timestamp": "2025-09-12T19:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película Iberoamericana"
       ]
     },
     "El límite del cuerpo": {
@@ -964,6 +1021,9 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-19T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Ficción"
       ]
     },
     "El lugar de la otra": {
@@ -988,6 +1048,9 @@ const data = {
           "sede_id": "s46",
           "timestamp": "2025-08-16T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película Iberoamericana"
       ]
     },
     "Estado de Silencio": {
@@ -1020,6 +1083,9 @@ const data = {
           "sede_id": "s54",
           "timestamp": "2025-09-14T19:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Largometraje Documental"
       ]
     },
     "Fiesta en la Madriguera": {
@@ -1056,6 +1122,10 @@ const data = {
           "sede_id": "s31",
           "timestamp": "2025-09-14T15:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Revelación Actoral",
+        "Mejor Guion Adaptado"
       ]
     },
     "Fulgores": {
@@ -1120,6 +1190,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-14T15:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Animación"
       ]
     },
     "Hasta Encontrarlos": {
@@ -1156,6 +1229,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-12T18:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje Documental"
       ]
     },
     "HOMBRES ÍNTEGROS": {
@@ -1172,6 +1248,10 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-12T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Revelación Actoral",
+        "Mejor Guion Original"
       ]
     },
     "Jíkuri: Viaje al país de los tarahumaras": {
@@ -1228,6 +1308,10 @@ const data = {
           "sede_id": "s15",
           "timestamp": "2025-09-08T17:00:00"
         }
+      ],
+      "categoria": [
+        "Mejores Efectos Visuales",
+		"Mejor Sonido"
       ]
     },
     "Jugaremos en el bosque": {
@@ -1256,6 +1340,10 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-13T19:15:00"
         }
+      ],
+      "categoria": [
+        "Mejor Maquillaje",
+        "Mejores Efectos Especiales"
       ]
     },
     "La Arriera": {
@@ -1263,7 +1351,12 @@ const data = {
       "estreno": "2023",
       "duracion": "103 min.",
       "sinopsis": "Sierra occidental de Jalisco 1930. Emilia vive en silencio su despertar sexual con Caro, su hermana adoptiva. Huyendo del conflicto, sale en busca de su padre biológico, haciéndose pasar por un arriero cruza las montañas hasta llegar al mar. Será un viaje de autodescubrimiento que la llevará de regreso al rancho para desafiar su destino. Limpieza digital.",
-      "proyecciones": []
+      "proyecciones": [],
+      "categoria": [
+        "Mejor Revelación Actoral",
+        "Mejor Fotografía",
+        "Mejor Vestuario"
+      ]
     },
     "La carretera de los perros": {
       "director": "Carlos Rueda",
@@ -1327,6 +1420,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-14T15:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Animación"
       ]
     },
     "La Cascada": {
@@ -1363,6 +1459,9 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-19T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Ficción"
       ]
     },
     "LA COCINA": {
@@ -1451,6 +1550,23 @@ const data = {
           "sede_id": "s21",
           "timestamp": "2025-09-18T19:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película",
+        "Mejor Dirección",
+        "Mejor Actriz",
+        "Mejor Actor",
+        "Mejor Coactuación Masculina",
+        "Mejor Guion Adaptado",
+        "Mejor Fotografía",
+        "Mejor Música Original",
+        "Mejor Vestuario",
+        "Mejor Diseño de Arte",
+        "Mejores Efectos Visuales",
+        "Mejor Maquillaje",
+        "Mejor Sonido",
+        "Mejores Efectos Especiales",
+        "Mejor Edición"
       ]
     },
     "La Falla": {
@@ -1519,6 +1635,9 @@ const data = {
           "sede_id": "s17",
           "timestamp": "2025-09-10T14:15:00"
         }
+      ],
+      "categoria": [
+        "Mejor Largometraje Documental"
       ]
     },
     "Mukí Sopalírili Aligué Gawíchi Nirúgame - La mujer de estrellas y montañas": {
@@ -1563,6 +1682,9 @@ const data = {
           "sede_id": "s08",
           "timestamp": "2025-09-08T19:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Largometraje Documental"
       ]
     },
     "Mutsk Wuäjxtë’ (Pequeños zorros)": {
@@ -1607,6 +1729,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-12T18:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje Documental"
       ]
     },
     "No nos moverán": {
@@ -1659,6 +1784,23 @@ const data = {
           "sede_id": "s05",
           "timestamp": "2025-09-18T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película",
+        "Mejor Dirección",
+        "Mejor Actriz",
+        "Mejor Coactuación Femenina",
+        "Mejor Coactuación Masculina",
+        "Mejor Revelación Actoral",
+        "Mejor Guion Original",
+        "Mejor Fotografía",
+        "Mejor Música Original",
+        "Mejor Vestuario",
+        "Mejor Diseño de Arte",
+        "Mejor Maquillaje",
+        "Mejor Sonido",
+        "Mejor Ópera Prima",
+        "Mejor Edición"
       ]
     },
     "Párvulos: Hijos del Apocalipsis": {
@@ -1707,6 +1849,11 @@ const data = {
           "sede_id": "s36",
           "timestamp": "2025-09-19T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejores Efectos Visuales",
+        "Mejor Maquillaje",
+        "Mejores Efectos Especiales"
       ]
     },
     "Passarinho": {
@@ -1755,6 +1902,9 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-19T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Ficción"
       ]
     },
     "Pedro Páramo": {
@@ -1863,6 +2013,23 @@ const data = {
           "sede_id": "s27",
           "timestamp": "2025-09-19T17:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película",
+        "Mejor Dirección",
+        "Mejor Actor",
+        "Mejor Coactuación Femenina",
+        "Mejor Coactuación Masculina",
+        "Mejor Guion Adaptado",
+        "Mejor Fotografía",
+        "Mejor Música Original",
+        "Mejor Vestuario",
+        "Mejor Diseño de Arte",
+        "Mejores Efectos Visuales",
+        "Mejor Maquillaje",
+        "Mejor Sonido",
+        "Mejores Efectos Especiales",
+        "Mejor Ópera Prima"
       ]
     },
     "RITA": {
@@ -1870,7 +2037,10 @@ const data = {
       "estreno": "2024",
       "duracion": "106 min.",
       "sinopsis": "Rita, de trece años, escapa de la pesadilla que vive con su padre. Se aventura por el mundo en busca de un lugar mágico donde sus sueños se hagan realidad. Es acogida por una amable dueña de un comedor, encuentra consuelo solo por un tiempo, hasta que es trasladada a una institución gestionada por el Estado. Esta institución está llena de seres fantásticos, niñas superpoderosas que planean acabar con las brujas y demonios que gobiernan el lugar y la esperan a ella para llevar a cabo su plan.",
-      "proyecciones": []
+      "proyecciones": [],
+      "categoria": [
+        "Mejor Película Iberoamericana"
+      ]
     },
     "Ser Semilla": {
       "director": "Julia Granillo Tostado",
@@ -1934,6 +2104,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-14T15:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Animación"
       ]
     },
     "Spiritum": {
@@ -1982,6 +2155,9 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-19T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Ficción"
       ]
     },
     "SUJO": {
@@ -2058,6 +2234,20 @@ const data = {
           "sede_id": "s10",
           "timestamp": "2025-09-12T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película",
+        "Mejor Dirección",
+        "Mejor Actor",
+        "Mejor Coactuación Masculina",
+        "Mejor Revelación Actoral",
+        "Mejor Guion Original",
+        "Mejor Fotografía",
+        "Mejor Música Original",
+        "Mejor Diseño de Arte",
+        "Mejor Sonido",
+        "Mejores Efectos Especiales",
+        "Mejor Edición"
       ]
     },
     "Technoboys": {
@@ -2086,6 +2276,9 @@ const data = {
           "sede_id": "s52",
           "timestamp": "2025-09-05T15:15:00"
         }
+      ],
+      "categoria": [
+        "Mejor Vestuario"
       ]
     },
     "Tesis sobre una domesticación": {
@@ -2102,6 +2295,9 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-16T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Guion Adaptado"
       ]
     },
     "Tratado de Invisbilidad": {
@@ -2158,6 +2354,10 @@ const data = {
           "sede_id": "s50",
           "timestamp": "2025-09-18T17:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Largometraje Documental",
+		"Mejor Edición"
       ]
     },
     "Turno Nocturno": {
@@ -2165,7 +2365,10 @@ const data = {
       "estreno": "2024",
       "duracion": "108 min.",
       "sinopsis": "En los pasillos oscuros de un hospital, deambula el fantasma de una enfermera conocida como \"La Planchada\", famosa por su aspecto impecable. Mientras los pacientes creen que ella está ahí para ayudarlos, las enfermeras y doctores conocen la verdad: deben seguir sus reglas al pie de la letra. \"Que nada se te olvide. No te distraigas. No te relaciones con el personal. No te duermas nunca.\" Rebeca, una nueva enfermera en periodo de prueba, no solo debe demostrar su valía ante sus superiores, sino también enfrentarse a esta misteriosa y temida entidad.",
-      "proyecciones": []
+      "proyecciones": [],
+      "categoria": [
+        "Mejores Efectos Visuales"
+      ]
     },
     "Uma y Haggen Princesa y Vikingo": {
       "director": "Benito Fernández Martínez",
@@ -2213,6 +2416,9 @@ const data = {
           "sede_id": "s36",
           "timestamp": "2025-09-17T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película de Animación"
       ]
     },
     "Un Actor Malo": {
@@ -2261,6 +2467,13 @@ const data = {
           "sede_id": "s44",
           "timestamp": "2025-09-19T19:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Película",
+        "Mejor Actriz",
+        "Mejor Actor",
+        "Mejor Guion Original",
+        "Mejor Edición"
       ]
     },
     "Una Historia de Amor y Guerra": {
@@ -2268,7 +2481,10 @@ const data = {
       "estreno": "2024",
       "duracion": "111 min.",
       "sinopsis": "Si se pudiera confeccionar todo lo indigno, malicioso, corrupto y ruin de ésta bella nación, los Estados Unidos Mexicanos, conoceríamos al Licenciado Pepe Sánchez Campo; un ávido constructor y emblemático lechón ario que se aventura a conseguir fondos para su siguiente gran sacrilegio nacional: El Mictlán. Un centro comercial diseñado para nacer, vivir y morir aislado de los terrores del mundo exterior. Después de presentar la idea a un grupo de inversionistas, el Licenciado pasa por su amada Constanza y un retén de narcotraficantes los secuestra. Matan a Pepe en medio de la carretera. Su amada corre despavorida, los narcotraficantes la capturan y revelan la pesada broma que su novio organizó para pedirle su mano en santo matrimonio, ella acepta.  El Licenciado Pepe Sánchez Campo y su amada no encuentran buena fortuna al dar la noticia a la familia: Teo, el primo de Constanza con quién tiene un amorío, se desborda en lágrimas; el suegro de Pepe se dispara en la cabeza en medio de la cena al escuchar la noticia. En el funeral de su suegro, Pepe recibe una llamada de su mano derecha: Jopita. Una guerrilla ha tomado el terreno de la construcción para el Mictlán. Junto con Jopa, y seis asesores, Pepe se arma de valor y plomo para recuperar el terreno. La guerrilla los somete, y bajo el mando de Engels García, un revolucionario profesor de secundaria, les sugiere dejar en paz las tierras que no les pertenecen. Pepe y su escuadrón sobornan a un diputado a punta de billetazos (literalmente) y les da el permiso para desalojar ilegalmente el terreno. Pepe contrata a Antonio Muerte, un asesino deprimido, para hacer el trabajo sucio de sacar a los guerrilleros del terreno.  Un grupo de paramilitares encabezados por Toño Muerte desaloja el terreno a punta de pistola. Constanza disfruta de su despedida de soltera con un show sorpresa de stripers. Pepe renta una mansión en Acapulco que sucumbe en un auténtico bacanal de privilegio mexicano: peleas campales, prostitutas y drogas. Teo aprovecha para grabar un video de Pepe con una prostituta, se da cuenta y lo persigue hasta enfrentarlo en combate. Pepe apuñala a Teo con un cuchillo de obsidiana. Jopa y Pepe le roban un coche a unos hippies y se estrellan en la carretera. Jopa muere y el licenciado es secuestrado por la lideresa de la guerrilla: Justina Venganza.  Justina encierra a Pepe en una pequeña choza de concreto, Engels será el encargado de custodiarlo hasta que se dicte la sentencia del pueblo por haber usurpado sus tierras. Teo sobrevive, aunque gravemente herido, y enseña la evidencia de la infidelidad de Pepe a Constanza. En un delirio, Pepe encuentra una pequeña puerta que lo lleva a otra prisión de concreto donde se encuentra a un Anciano que lleva encerrado ahí desde los años setenta. El Anciano le muestra el camino a Pepe, escapa adentrándose en la oscuridad del bosque. Pepe se encuentra con un Xoloitzcuintle parlante que lo lleva en una aventura a través de la historia de México. Pepe amanece en el bosque y es rescatado por Toño Muerte y su escuadrón. La guerrilla comandada por Justina los acorrala, matan a Toño y vuelven a capturar a Pepe. Descubrimos que Constanza está embarazada.  El Pueblo organiza un juicio popular para darle sentencia a los crímenes del Licenciado Pepe Sánchez Campo, se presentan los argumentos de ambas partes. La sentencia se dará al amanecer. Engels no quiere dejar a la suerte el destino de Pepe, lo secuestra en un costal de papas y trata de extorsionar sin éxito a la familia Sánchez. Engels mata a Pepe y lo bota en el río, que por un problema de basura se estanca en el purgatorio: Toluca. Constanza se ve consolada por su primo, Teo, que deformado por la operación, le pide a su prima que se case con él. Pepe se encuentra con el difunto Toño Muerte, que lo lleva a la oficina del perro parlante para pagar su cuota para poder volver a el mundo y detener la incestuosa boda de su amada. Justina encuentra a Engels y lo mata.  Pepe resucita y llega victorioso a la boda de Constanza para detenerla. Justina y sus hombres rodean la iglesia tomando a los invitados como rehenes. Justo antes de dictarle su sentencia, Teo mata a Pepe enfrente de la guerrilla e invitados. Pepe muere, otra vez. Constanza escapa por una escotilla secreta de la iglesia junto con su dama de compañía y el Padre Efraín. Un túnel secreto los lleva hasta la playa, un velero los espera.",
-      "proyecciones": []
+      "proyecciones": [],
+      "categoria": [
+        "Mejor Maquillaje"
+      ]
     },
     "Vergüenza": {
       "director": "Miguel Salgado",
@@ -2308,6 +2524,10 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-19T18:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Actor",
+        "Mejor Ópera Prima"
       ]
     },
     "Viaje de Negocios": {
@@ -2344,6 +2564,9 @@ const data = {
           "sede_id": "s53",
           "timestamp": "2025-09-19T16:00:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje de Ficción"
       ]
     },
     "Vientre de luna": {
@@ -2384,6 +2607,9 @@ const data = {
           "sede_id": "s51",
           "timestamp": "2025-09-12T18:30:00"
         }
+      ],
+      "categoria": [
+        "Mejor Cortometraje Documental"
       ]
     }
   }
@@ -2410,6 +2636,7 @@ function timestampToFechaHora(ts) {
 function fillDropdowns() {
   const estadosSet = new Set();
   const peliculasList = Object.keys(peliculas);
+  const categoriasSet = new Set();
 
   for (const sede_id in sedes) {
     estadosSet.add(sedes[sede_id].estado);
@@ -2427,6 +2654,7 @@ function fillDropdowns() {
     '<option value="">Selecciona un estado</option>' +
     [...estadosSet].sort().map(e => `<option value="${e}">${e}</option>`).join('');
 
+  // 🗓 Llenar menú de fechas
   const todasFechas = new Set();
   for (const p of Object.values(peliculas)) {
     for (const pr of p.proyecciones) {
@@ -2448,6 +2676,20 @@ function fillDropdowns() {
 
   document.getElementById("fechaSelect").innerHTML =
     '<option value="">Selecciona una fecha</option>' + fechaOptions.join('');
+
+  // 🏆 Llenar menú de categorías
+  for (const peli of Object.values(peliculas)) {
+    if (Array.isArray(peli.categoria)) {
+      peli.categoria.forEach(cat => categoriasSet.add(cat));
+    }
+  }
+
+  const categoriasOptions = [...categoriasSet]
+    .sort()
+    .map(cat => `<option value="${cat}">${cat}</option>`);
+
+  document.getElementById("categoriaSelect").innerHTML =
+    '<option value="">Selecciona una categoría</option>' + categoriasOptions.join('');
 }
 
 function clearTable() {
@@ -2565,9 +2807,39 @@ function buscarPorSede() {
   renderTable(res);
 }
 
+function buscarPorCategoria() {
+  const categoria = document.getElementById("categoriaSelect").value;
+  if (!categoria) return;
+
+  const peliculasEnCategoria = Object.entries(peliculas)
+    .filter(([titulo, datos]) =>
+      Array.isArray(datos.categoria) && datos.categoria.includes(categoria)
+    )
+    .map(([titulo]) => titulo)
+    .sort();
+
+  const table = document.getElementById("resultadosTable");
+  table.innerHTML = "";
+
+  if (peliculasEnCategoria.length === 0) {
+    table.innerHTML = `<tr><td>No hay películas nominadas en esta categoría.</td></tr>`;
+    return;
+  }
+
+  const rows = peliculasEnCategoria.map(titulo => 
+    `<tr><td><button onclick="verPeliculaDesdeCategoria('${titulo.replace(/'/g, "\\'")}')">${titulo}</button></td></tr>`
+  ).join('');
+
+  table.innerHTML = `<tr><th>Películas nominadas en: ${categoria}</th></tr>` + rows;
+}
+
+function verPeliculaDesdeCategoria(titulo) {
+  document.getElementById("peliculaSelect").value = titulo;
+  buscarPelicula();
+}
+
 document.addEventListener("DOMContentLoaded", () => fillDropdowns());
 </script>
 
 </body>
 </html>
-
