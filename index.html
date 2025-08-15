@@ -447,6 +447,9 @@ const data = {
       "proyecciones": [],
       "categoria": [
         "Mejor Guion Adaptado"
+      ],
+      "streaming": [
+        "HBO Max"
       ]
     },
     "Concierto para otras manos": {
@@ -486,6 +489,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Largometraje Documental"
+      ],
+      "streaming": [
+        "cines selectos"
       ]
     },
     "Corina": {
@@ -596,6 +602,9 @@ const data = {
         "Mejor Vestuario",
         "Mejor Diseño de Arte",
         "Mejor Ópera Prima"
+      ],
+      "streaming": [
+        "Prime Video"
       ]
     },
     "Dolores": {
@@ -871,6 +880,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Largometraje Documental"
+      ],
+      "streaming": [
+        "Netflix"
       ]
     },
     "El Jockey": {
@@ -881,6 +893,9 @@ const data = {
       "proyecciones": [],
       "categoria": [
         "Mejor Película Iberoamericana"
+      ],
+      "streaming": [
+        "Disney+"
       ]
     },
     "EL LADRÓN DE PERROS": {
@@ -1074,6 +1089,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Película Iberoamericana"
+      ],
+      "streaming": [
+        "Netflix"
       ]
     },
     "Estado de Silencio": {
@@ -1117,6 +1135,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Largometraje Documental"
+      ],
+      "streaming": [
+        "Netflix"
       ]
     },
     "Fiesta en la Madriguera": {
@@ -1169,6 +1190,9 @@ const data = {
       "categoria": [
         "Mejor Revelación Actoral",
         "Mejor Guion Adaptado"
+      ],
+      "streaming": [
+        "Netflix"
       ]
     },
     "Fulgores": {
@@ -1499,6 +1523,9 @@ const data = {
       "categoria": [
         "Mejor Maquillaje",
         "Mejores Efectos Especiales"
+      ],
+      "streaming": [
+        "ViX"
       ]
     },
     "La Arriera": {
@@ -1790,6 +1817,9 @@ const data = {
         "Mejor Sonido",
         "Mejores Efectos Especiales",
         "Mejor Edición"
+      ],
+      "streaming": [
+        "HBO Max"
       ]
     },
     "La Falla": {
@@ -1869,6 +1899,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Largometraje Documental"
+      ],
+      "streaming": [
+        "compra y renta"
       ]
     },
     "Mukí Sopalírili Aligué Gawíchi Nirúgame - La mujer de estrellas y montañas": {
@@ -1932,6 +1965,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Largometraje Documental"
+      ],
+      "streaming": [
+        "compra y renta"
       ]
     },
     "Mutsk Wuäjxtë’ (Pequeños zorros)": {
@@ -2096,6 +2132,9 @@ const data = {
         "Mejor Sonido",
         "Mejor Ópera Prima",
         "Mejor Edición"
+      ],
+      "streaming": [
+        "cines selectos"
       ]
     },
     "Párvulos: Hijos del Apocalipsis": {
@@ -2405,6 +2444,9 @@ const data = {
         "Mejor Sonido",
         "Mejores Efectos Especiales",
         "Mejor Ópera Prima"
+      ],
+      "streaming": [
+        "Netflix"
       ]
     },
     "RITA": {
@@ -2688,10 +2730,13 @@ const data = {
         "Mejor Sonido",
         "Mejores Efectos Especiales",
         "Mejor Edición"
+      ],
+      "streaming": [
+        "Prime Video"
       ]
     },
     "Technoboys": {
-      "director": "Gerardo Gatica González,Luis Gerardo Méndez",
+      "director": "Gerardo Gatica González,Luis Gerardo Méndez",
       "estreno": "2024",
       "duracion": "109 min.",
       "sinopsis": "20 años después de dominar los charts de popularidad, la exitosa boyband Technoboys vuelve a los escenarios para reclamar su trono en el despiadado mundo del pop.",
@@ -2731,6 +2776,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Vestuario"
+      ],
+      "streaming": [
+        "Netflix"
       ]
     },
     "Tesis sobre una domesticación": {
@@ -2826,6 +2874,9 @@ const data = {
       "categoria": [
         "Mejor Largometraje Documental",
         "Mejor Edición"
+      ],
+      "streaming": [
+        "compra y renta"
       ]
     },
     "Turno Nocturno": {
@@ -2836,6 +2887,9 @@ const data = {
       "proyecciones": [],
       "categoria": [
         "Mejores Efectos Visuales"
+      ],
+      "streaming": [
+        "HBO Max"
       ]
     },
     "Uma y Haggen Princesa y Vikingo": {
@@ -2903,6 +2957,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Película de Animación"
+      ],
+      "streaming": [
+        "HBO Max"
       ]
     },
     "Un Actor Malo": {
@@ -2982,6 +3039,9 @@ const data = {
         "Mejor Actor",
         "Mejor Guion Original",
         "Mejor Edición"
+      ],
+      "streaming": [
+        "Prime Video"
       ]
     },
     "Una Historia de Amor y Guerra": {
@@ -3107,6 +3167,9 @@ const data = {
       ],
       "categoria": [
         "Mejor Cortometraje de Ficción"
+      ],
+      "streaming": [
+        "YouTube"
       ]
     },
     "Vientre de luna": {
@@ -3700,10 +3763,27 @@ function buscarPelicula() {
     "Estreno": peli.estreno,
     "Duración": peli.duracion,
     "Sinopsis": peli.sinopsis,
-    "Categorias": Array.isArray(peli.categoria) ? peli.categoria : []
+    "Categorias": Array.isArray(peli.categoria) ? peli.categoria : [],
+    "Streaming": Array.isArray(peli.streaming) ? peli.streaming : []
   };
 
-  // Construir lista de proyecciones y ordenar
+  // ---- STREAMING: construir texto
+  let streamingHTML = "";
+  if (encabezado.Streaming.length > 0) {
+    let lista = encabezado.Streaming;
+    if (lista.length === 1) {
+      streamingHTML = `Disponible en ${lista[0]}`;
+    } else if (lista.length === 2) {
+      streamingHTML = `Disponible en ${lista[0]} y ${lista[1]}`;
+    } else {
+      let todasMenosUltima = lista.slice(0, -1).join(", ");
+      let ultima = lista[lista.length - 1];
+      streamingHTML = `Disponible en ${todasMenosUltima} y ${ultima}`;
+    }
+    streamingHTML = `<div style="font-style:italic;margin-top:4px;">${escapeHtml(streamingHTML)}</div>`;
+  }
+
+  // ---- Construir lista de proyecciones y ordenar
   const res = (peli.proyecciones || []).map(pr => {
     const s = sedes[pr.sede_id] || { nombre: pr.sede_id, ubicacion: "" };
     const { fecha, hora, fechaISO } = timestampToFechaHora(pr.timestamp);
@@ -3715,7 +3795,6 @@ function buscarPelicula() {
       "FechaISO": fechaISO
     };
   }).sort((a, b) => {
-    // ordenar por fecha ISO y luego por hora (string compare funciona con formato HH:MM)
     return a.FechaISO.localeCompare(b.FechaISO) || a.Hora.localeCompare(b.Hora);
   });
 
@@ -3728,14 +3807,13 @@ function buscarPelicula() {
   if (categorias.length > 0) {
     const maxVisible = 4;
     const visibles = categorias.slice(0, maxVisible);
-    const extra = categorias.slice(maxVisible); // sólo las restantes (evita duplicado)
+    const extra = categorias.slice(maxVisible);
     categoriasHTML = `<br><strong>Nominada a:</strong><br>` +
       visibles.map(c => `🏆 ${escapeHtml(c)}`).join('<br>');
     if (extra.length > 0) {
       const slug = titulo.replace(/[^a-z0-9]/gi, '_');
       const divId = `cats_extra_${slug}`;
       const linkId = `cats_toggle_${slug}`;
-      // data-count para que toggle reconstruya la etiqueta correctamente
       categoriasHTML += `<br><a href="#" id="${linkId}" data-count="${extra.length}" onclick="toggleCategorias('${divId}','${linkId}'); return false;">y ${extra.length} más ▾</a>`;
       categoriasHTML += `<div id="${divId}" style="display:none; margin-top:6px;">` +
         extra.map(c => `🏆 ${escapeHtml(c)}`).join('<br>') +
@@ -3743,12 +3821,16 @@ function buscarPelicula() {
     }
   }
 
+  // ---- Encabezado
   const encRow = `<tr><td colspan='4' style="vertical-align:top;padding:12px;">
     <div style="font-size:1.05em;"><strong>${escapeHtml(encabezado.Película)}</strong></div>
-    <div style="color:#444;margin-top:4px;">${escapeHtml(encabezado.Director)} | ${escapeHtml(encabezado.Estreno)} | ${escapeHtml(encabezado.Duración)}</div>
+    <div style="color:#444;margin-top:4px;">
+      ${escapeHtml(encabezado.Director)} | ${escapeHtml(encabezado.Estreno)} | ${escapeHtml(encabezado.Duración)}
+      ${streamingHTML}
+    </div>
     <div style="margin-top:8px;">🎬 ${escapeHtml(encabezado.Sinopsis)}</div>
     <div style="margin-top:8px;">${categoriasHTML}</div>
-    </td></tr>`;
+  </td></tr>`;
 
   if (res.length === 0) {
     table.innerHTML = encRow + '<tr><td colspan="4">No hay funciones para esta película.</td></tr>';
