@@ -155,7 +155,7 @@ const data = {
         },
         {
           "sede_id": "s04",
-          "timestamp": "2025-09-05T18:00:00"
+          "timestamp": "2025-08-27T18:00:00"
         },
         {
           "sede_id": "s45",
@@ -333,7 +333,7 @@ const data = {
         },
         {
           "sede_id": "s04",
-          "timestamp": "2025-08-23T18:00:00"
+          "timestamp": "2025-09-03T18:00:00"
         },
         {
           "sede_id": "s41",
@@ -663,7 +663,7 @@ const data = {
         },
         {
           "sede_id": "s04",
-          "timestamp": "2025-09-05T18:00:00"
+          "timestamp": "2025-08-27T18:00:00"
         },
         {
           "sede_id": "s45",
@@ -1163,10 +1163,6 @@ const data = {
           "timestamp": "2025-08-30T18:00:00"
         },
         {
-          "sede_id": "s04",
-          "timestamp": "2025-09-06T12:00:00"
-        },
-        {
           "sede_id": "s47",
           "timestamp": "2025-09-13T17:00:00"
         },
@@ -1243,7 +1239,7 @@ const data = {
         },
         {
           "sede_id": "s04",
-          "timestamp": "2025-09-05T18:00:00"
+          "timestamp": "2025-08-27T18:00:00"
         },
         {
           "sede_id": "s45",
@@ -1588,7 +1584,7 @@ const data = {
         },
         {
           "sede_id": "s04",
-          "timestamp": "2025-09-05T18:00:00"
+          "timestamp": "2025-08-27T18:00:00"
         },
         {
           "sede_id": "s45",
@@ -1722,7 +1718,7 @@ const data = {
         },
         {
           "sede_id": "s04",
-          "timestamp": "2025-08-22T18:00:00"
+          "timestamp": "2025-08-20T18:00:00"
         },
         {
           "sede_id": "s02",
@@ -2507,7 +2503,7 @@ const data = {
         },
         {
           "sede_id": "s04",
-          "timestamp": "2025-09-05T18:00:00"
+          "timestamp": "2025-08-27T18:00:00"
         },
         {
           "sede_id": "s45",
@@ -2625,7 +2621,7 @@ const data = {
       "proyecciones": [
         {
           "sede_id": "s04",
-          "timestamp": "2025-08-09T18:00:00"
+          "timestamp": "2025-08-13T18:00:00"
         },
         {
           "sede_id": "s28",
@@ -3274,7 +3270,7 @@ const data = {
     },
     "s04": {
       "nombre": "Cineclub Xicalco",
-      "ubicacion": "Cda. de Reforma 3, San Miguel Xicalco, Tlalpan, 14490 Ciudad de México, CDMX",
+      "ubicacion": "Museo de Historia de Tlalpan, Plaza de la Constitución No. 10, Tlalpan Centro I, Tlalpan, 14000 Ciudad de México, CDMX",
       "estado": "Ciudad de México"
     },
     "s05": {
@@ -3444,7 +3440,7 @@ const data = {
     },
     "s38": {
       "nombre": "ARTEFAKTA",
-      "ubicacion": "República de Chile 47, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06010 Ciudad de México, CDMX",
+      "ubicacion": "Proyecciones itinerantes en el Centro Histórico de la Ciudad de México. Para más información, revisar @artefakta_mx en Instagram.",
       "estado": "Ciudad de México"
     },
     "s39": {
@@ -3862,10 +3858,16 @@ function mostrarTodasCategorias(id, categorias) {
 function actualizarSedesPorEstado() {
   const estado = document.getElementById("estadoSedeSelect").value;
   const sedeSel = document.getElementById("sedeSelect");
-  if (!estado) return sedeSel.innerHTML = '<option value="">Selecciona una sede</option>';
+  if (!estado) {
+    sedeSel.innerHTML = '<option value="">Selecciona una sede</option>';
+    return;
+  }
+
   const sedesOpciones = Object.entries(sedes)
     .filter(([_, s]) => s.estado === estado)
+    .sort((a, b) => a[1].nombre.localeCompare(b[1].nombre, 'es', { sensitivity: 'base' })) // Orden alfabético
     .map(([id, s]) => `<option value="${id}">${s.nombre}</option>`);
+
   sedeSel.innerHTML = '<option value="">Selecciona una sede</option>' + sedesOpciones.join('');
 }
 
