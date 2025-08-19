@@ -3513,7 +3513,7 @@ const data = {
     },
     "s38": {
       "nombre": "ARTEFAKTA",
-      "ubicacion": "Proyecciones itinerantes en el Centro Histórico de la Ciudad de México. Para más información, revisar @artefakta_mx en Instagram.",
+      "ubicacion": "Proyecciones itinerantes en el Centro Histórico de la Ciudad de México.\nFunción del 21 de agosto: La Chicha CCEMx, República de Guatemala 18, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06020 Ciudad de México, CDMX.\nPara más información, revisar @artefakta_mx en Instagram.",
       "estado": "Ciudad de México"
     },
     "s39": {
@@ -3797,7 +3797,7 @@ function buscarFechaEstado() {
         "Película": titulo,
         "Duración": info.duracion,
         "Sede": sede.nombre,
-        "Dirección": sede.ubicacion,
+        "Dirección": `${escapeHtml(sede.ubicacion)}`,
         "Hora": ts.hora
       });
     }
@@ -3813,7 +3813,8 @@ function escapeHtml(text) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    .replace(/'/g, "&#039;")
+    .replace(/\r?\n/g, "<br>");
 }
 
 function toggleCategorias(divId, linkId) {
@@ -3983,8 +3984,8 @@ function buscarPorSede() {
 
   // Encabezado con nombre y dirección
   const encRow = `<tr><td colspan='4' style="padding:12px;">
-    <strong>${sede.nombre}</strong><br>
-    ${sede.ubicacion}
+    <strong>${escapeHtml(sede.nombre)}</strong><br>
+    ${escapeHtml(sede.ubicacion)}
   </td></tr>`;
 
   if (res.length === 0) {
