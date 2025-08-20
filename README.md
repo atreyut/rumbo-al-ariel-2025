@@ -38,4 +38,4 @@ El proyecto está organizado de la siguiente manera:
 
 Ve a <https://atreyut.github.io/rumbo-al-ariel-2025/> desde cualquier navegador.
 
-¡Disfruta del mejor cine mexicano\!
+¡Apoya el cine mexicano\!
