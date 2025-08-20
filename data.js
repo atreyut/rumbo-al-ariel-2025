@@ -3452,7 +3452,7 @@ const sedes = {
     "estado": "Ciudad de México"
   },
   "s22": {
-    "nombre": "Cineclub Atzintli",
+    "nombre": "Cineclub Atzintli / Utopía Hídrica Atzintli",
     "ubicacion": "Ermita Iztapalapa & Paraíso, Xalpa, Iztapalapa, 09640 Ciudad de México, CDMX",
     "estado": "Ciudad de México"
   },
@@ -3467,7 +3467,7 @@ const sedes = {
     "estado": "Ciudad de México"
   },
   "s25": {
-    "nombre": "Cineclub Huizachtepetl",
+    "nombre": "Cineclub Huizachtepetl / Utopía Estrella Huizachtepetl",
     "ubicacion": "Av. San Lorenzo 312, San Juan Xalpa, Iztapalapa, 09850 Ciudad de México, CDMX",
     "estado": "Ciudad de México"
   },
@@ -3482,12 +3482,12 @@ const sedes = {
     "estado": "Ciudad de México"
   },
   "s28": {
-    "nombre": "Olini",
+    "nombre": "Utopía Olini",
     "ubicacion": "Calz. Ignacio Zaragoza 1715, Ejército Constitucionalista I II y III, Iztapalapa, 09220 Ciudad de México, CDMX",
     "estado": "Ciudad de México"
   },
   "s29": {
-    "nombre": "Cine Papalotl / UTOPIA Papalotl",
+    "nombre": "Cine Papalotl / Utopía Papalotl",
     "ubicacion": "Datsun (3ER. Retorno, Reforma Económica 52, Reforma Política, Iztapalapa, 09730 Ciudad de México, CDMX",
     "estado": "Ciudad de México"
   },
@@ -3588,7 +3588,7 @@ const sedes = {
   },
   "s49": {
     "nombre": "Sala Audiovisual del Museo Regional de Historia",
-    "ubicacion": "Portal Morelos 1-altos, centro histórico en la ciudad de Colima. Col",
+    "ubicacion": "Portal Morelos 1, Centro Histórico, 28000 Colima, Col.",
     "estado": "Colima"
   },
   "s50": {
@@ -3613,7 +3613,7 @@ const sedes = {
   },
   "s54": {
     "nombre": "Kinoki San Cristóbal de Las Casas",
-    "ubicacion": "Belisario Domínguez 5A, Zona Centro, 29200 San Cristóbal de las Casas, Chis.",
+    "ubicacion": "Belisario Domínguez 5A, Zona Centro, 29200 San Cristóbal de Las Casas, Chis.",
     "estado": "Chiapas"
   },
   "s55": {
@@ -3678,7 +3678,7 @@ const sedes = {
   },
   "s67": {
     "nombre": "Cerdo de Babel",
-    "ubicacion": "Ocampo 324 Zona Centro, Saltillo, Coah. CP 25000",
+    "ubicacion": "Calle Melchor Ocampo 324, Zona Centro, 25000 Saltillo, Coah.",
     "estado": "Coahuila"
   },
   "s68": {
@@ -3688,7 +3688,7 @@ const sedes = {
   },
   "s69": {
     "nombre": "Videoteca Bengala",
-    "ubicacion": "Oriente 17, #134, entre norte 24 y 26, Colonia El Edén, Orizaba, Veracruz",
+    "ubicacion": "Oriente 17 134, El Edén, 94324 Orizaba, Ver.",
     "estado": "Veracruz"
   },
   "s70": {
