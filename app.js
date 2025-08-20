@@ -125,6 +125,25 @@ function resetCategoriaBoton() {
   btn.onclick = buscarPorCategoria;
 }
 
+/**
+ * Muestra u oculta las categorías extra de una película.
+ * @param {string} divId El ID del div que contiene las categorías extra.
+ * @param {string} linkId El ID del enlace 'a' que activa la función.
+ */
+function toggleCategorias(divId, linkId) {
+  const div = document.getElementById(divId);
+  const link = document.getElementById(linkId);
+  const count = link.getAttribute('data-count');
+
+  if (div.style.display === 'none') {
+    div.style.display = 'block';
+    link.innerHTML = 'mostrar menos ▴';
+  } else {
+    div.style.display = 'none';
+    link.innerHTML = `y ${count} más ▾`;
+  }
+}
+
 // =================================================================================
 // DATA HANDLING & UTILS
 // =================================================================================
@@ -237,7 +256,7 @@ function buscarPorTexto() {
 }
 
 /**
- * Muestra los detalles de una película y sus proyecciones.
+ * Muestra los detalles de una película, su póster, categorías y proyecciones.
  */
 function buscarPelicula() {
   const titulo = document.getElementById("peliculaSelect").value;
@@ -262,10 +281,33 @@ function buscarPelicula() {
     }
   }
 
-  const posterHTML = peli.imagen ?
-    `<div class="poster-container"><img src="${peli.imagen}" alt="Póster de ${escapeHtml(titulo)}"></div>` :
-    '';
+  // --- LÓGICA DE CATEGORÍAS ---
+  let categoriasHTML = "";
+  const categorias = peli.categoria || [];
+  if (categorias.length > 0) {
+    const maxVisible = 4;
+    const visibles = categorias.slice(0, maxVisible);
+    const extra = categorias.slice(maxVisible);
+    
+    categoriasHTML = `<strong>Nominada a:</strong><br>` +
+      visibles.map(c => `🏆 ${escapeHtml(c)}`).join('<br>');
+      
+    if (extra.length > 0) {
+      const slug = titulo.replace(/[^a-z0-9]/gi, '_');
+      const divId = `cats_extra_${slug}`;
+      const linkId = `cats_toggle_${slug}`;
+      categoriasHTML += `<br><a href="#" id="${linkId}" data-count="${extra.length}" onclick="toggleCategorias('${divId}','${linkId}'); return false;" style="font-weight:500; text-decoration:none; color:#333;">y ${extra.length} más ▾</a>`;
+      categoriasHTML += `<div id="${divId}" style="display:none; margin-top:6px;">` +
+        extra.map(c => `🏆 ${escapeHtml(c)}`).join('<br>') +
+        `</div>`;
+    }
+  }
+  // --- FIN DE LA LÓGICA DE CATEGORÍAS ---
 
+  const posterHTML = peli.imagen 
+    ? `<div class="poster-container"><img src="${peli.imagen}" alt="Póster de ${escapeHtml(titulo)}"></div>` 
+    : '';
+  
   const infoHTML = `
     <div class="pelicula-info-header">
       ${posterHTML}
@@ -274,17 +316,18 @@ function buscarPelicula() {
         <div style="color:#444;margin-top:4px;">${escapeHtml(peli.director)} | ${peli.estreno} | ${peli.duracion}</div>
         ${streamingHTML}
         <div style="margin-top:8px;">🎬 ${formatMultiline(peli.sinopsis)}</div>
+        <div style="margin-top:8px;">${categoriasHTML}</div>
       </div>
     </div>`;
-
+  
   infoContainer.innerHTML = infoHTML;
 
   const res = (peli.proyecciones || []).map(pr => {
     const s = sedes[pr.sede_id];
     const { fecha, hora, fechaISO } = timestampToFechaHora(pr.timestamp);
     return { "Sede": s.nombre, "Dirección": s.ubicacion, "Fecha": fecha, "Hora": hora, "FechaISO": fechaISO };
-  }).sort((a, b) => a.FechaISO.localeCompare(b.FechaISO) || a.Hora.localeCompare(b.Hora));
-
+  }).sort((a,b) => a.FechaISO.localeCompare(b.FechaISO) || a.Hora.localeCompare(b.Hora));
+  
   if (res.length > 0) {
     const thead = `<tr><th>Sede</th><th>Dirección</th><th>Fecha</th><th>Hora</th></tr>`;
     const tbody = res.map(r => `<tr><td>${escapeHtml(r.Sede)}</td><td>${formatMultiline(r.Dirección)}</td><td>${r.Fecha}</td><td>${r.Hora}</td></tr>`).join("");
