@@ -1,0 +1,202 @@
+/* =================================
+   Estilos Generales y Tipografía
+   ================================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;
+  padding: 20px;
+  color: #333;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #444;
+}
+
+/* =================================
+   Componentes de Formulario
+   ================================= */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+select, button, input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+/* =================================
+   Navegación por Pestañas (Tabs)
+   ================================= */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tabs button {
+  flex: 1 1 30%;
+  background: #ff5d00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background: #eb5500;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =================================
+   Contenedores de Filtros y Búsqueda
+   ================================= */
+.filtros-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#fechaFiltrosContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  width: 100%;
+}
+
+.input-group {
+  flex-grow: 1;
+}
+
+#checkboxOcultarContainer {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+#checkboxOcultarContainer label {
+  font-weight: normal;
+  margin: 0 0 0 5px;
+}
+
+/* =================================
+   Resultados: Info de Película y Tabla
+   ================================= */
+#peliculaInfoContainer {
+  margin-bottom: 20px;
+}
+
+#peliculaInfoContainer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pelicula-info-header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.poster-container {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.poster-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.info-container {
+  flex-grow: 1;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+/* =================================
+   Diseño Responsivo (Móvil)
+   ================================= */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  #fechaFiltrosContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  #checkboxOcultarContainer {
+    padding-bottom: 0;
+  }
+
+  .pelicula-info-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .poster-container {
+    width: 60%;
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .info-container div:last-child {
+    text-align: left;
+  }
+}
