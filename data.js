@@ -68,6 +68,14 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-19T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-20T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-17T20:00:00"
       }
     ],
     "categoria": [
@@ -145,6 +153,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-17T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-03T20:00:00"
       }
     ],
     "categoria": [
@@ -202,6 +214,14 @@ const peliculas = {
       {
         "sede_id": "s72",
         "timestamp": "2025-09-06T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-22T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-06T20:00:00"
       }
     ],
     "categoria": [
@@ -333,6 +353,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-17T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-03T20:00:00"
       }
     ],
     "categoria": [
@@ -512,6 +536,10 @@ const peliculas = {
       {
         "sede_id": "s50",
         "timestamp": "2025-08-28T16:30:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-07T20:00:00"
       }
     ],
     "categoria": [
@@ -617,6 +645,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-19T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-17T20:00:00"
       }
     ],
     "categoria": [
@@ -698,6 +730,10 @@ const peliculas = {
       {
         "sede_id": "s50",
         "timestamp": "2025-08-31T19:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-04T20:00:00"
       }
     ],
     "categoria": [
@@ -983,6 +1019,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-18T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-10T20:00:00"
       }
     ],
     "categoria": [
@@ -1247,6 +1287,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-19T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-17T20:00:00"
       }
     ],
     "categoria": [
@@ -1328,6 +1372,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-17T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-03T20:00:00"
       }
     ],
     "categoria": [
@@ -1447,6 +1495,10 @@ const peliculas = {
       {
         "sede_id": "s68",
         "timestamp": "2025-09-11T19:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-31T20:00:00"
       }
     ],
     "categoria": [
@@ -1497,6 +1549,14 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-04T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-28T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-05T20:00:00"
       }
     ],
     "categoria": [
@@ -1516,7 +1576,12 @@ const peliculas = {
     "estreno": "2023",
     "duracion": "103 min.",
     "sinopsis": "Sierra occidental de Jalisco 1930. Emilia vive en silencio su despertar sexual con Caro, su hermana adoptiva. Huyendo del conflicto, sale en busca de su padre biológico, haciéndose pasar por un arriero cruza las montañas hasta llegar al mar. Será un viaje de autodescubrimiento que la llevará de regreso al rancho para desafiar su destino. Limpieza digital.",
-    "proyecciones": [],
+    "proyecciones": [
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-30T20:00:00"
+      }
+    ],
     "categoria": [
       "Mejor Revelación Actoral",
       "Mejor Fotografía",
@@ -1602,6 +1667,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-19T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-17T20:00:00"
       }
     ],
     "categoria": [
@@ -1667,6 +1736,14 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-18T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-20T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-10T20:00:00"
       }
     ],
     "categoria": [
@@ -1800,6 +1877,10 @@ const peliculas = {
       {
         "sede_id": "s50",
         "timestamp": "2025-08-28T19:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-27T20:00:00"
       }
     ],
     "categoria": [
@@ -1900,6 +1981,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-08-23T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-18T20:00:00"
       }
     ],
     "categoria": [
@@ -1970,6 +2055,14 @@ const peliculas = {
       {
         "sede_id": "s01",
         "timestamp": "2025-09-05T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-21T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-12T20:00:00"
       }
     ],
     "categoria": [
@@ -2056,6 +2149,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-17T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-03T20:00:00"
       }
     ],
     "categoria": [
@@ -2224,6 +2321,14 @@ const peliculas = {
       {
         "sede_id": "s60",
         "timestamp": "2025-09-17T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-23T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-13T20:00:00"
       }
     ],
     "categoria": [
@@ -2303,6 +2408,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-18T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-10T20:00:00"
       }
     ],
     "categoria": [
@@ -2576,6 +2685,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-19T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-17T20:00:00"
       }
     ],
     "categoria": [
@@ -2653,6 +2766,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-18T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-10T20:00:00"
       }
     ],
     "categoria": [
@@ -3019,6 +3136,14 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-16T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-24T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-14T20:00:00"
       }
     ],
     "categoria": [
@@ -3105,6 +3230,14 @@ const peliculas = {
       {
         "sede_id": "s50",
         "timestamp": "2025-08-30T16:30:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-29T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-19T20:00:00"
       }
     ],
     "categoria": [
@@ -3179,6 +3312,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-12T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-11T20:00:00"
       }
     ],
     "categoria": [
@@ -3245,6 +3382,14 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-18T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-08-20T20:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-10T20:00:00"
       }
     ],
     "categoria": [
@@ -3335,6 +3480,10 @@ const peliculas = {
       {
         "sede_id": "s66",
         "timestamp": "2025-09-17T18:00:00"
+      },
+      {
+        "sede_id": "s03",
+        "timestamp": "2025-09-03T20:00:00"
       }
     ],
     "categoria": [
