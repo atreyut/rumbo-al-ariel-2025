@@ -82,6 +82,9 @@ function showTab(tabId) {
   document.getElementById(tabId).classList.add("active");
   document.getElementById("resultadosTable").innerHTML = "";
   document.getElementById("peliculaInfoContainer").innerHTML = "";
+  if (tabId === 'categoriaTab') {
+    resetCategoriaBoton();
+  }
 }
 
 /**
