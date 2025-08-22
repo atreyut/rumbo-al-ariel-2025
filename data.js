@@ -885,7 +885,7 @@ const peliculas = {
     ],
     "imagen": "https://amacc.org.mx/nominados-ganadores/assets/banners/el-jockeyfKn5WNFU.jpg"
   },
-  "EL LADRÓN DE PERROS": {
+  "El ladrón de perros": {
     "director": "Vinko Tomicic Salinas",
     "estreno": "2024",
     "duracion": "90 min.",
@@ -1396,7 +1396,7 @@ const peliculas = {
     "streaming": [],
     "imagen": "https://amacc.org.mx/nominados-ganadores/assets/banners/hasta-encontrarlos2hF6Rs5V.jpg"
   },
-  "HOMBRES ÍNTEGROS": {
+  "Hombres íntegros": {
     "director": "Alejandro Andrade Pease",
     "estreno": "2024",
     "duracion": "89 min.",
@@ -1427,7 +1427,7 @@ const peliculas = {
     "imagen": "https://amacc.org.mx/nominados-ganadores/assets/banners/hombres-integros5Ckwnsqb.jpg"
   },
   "Jíkuri: Viaje al país de los tarahumaras": {
-    "director": "FEDERICO CECCHETTI",
+    "director": "Federico Cecchetti",
     "estreno": "2024",
     "duracion": "94 min.",
     "sinopsis": "La vida de Rayenari cambia tras la llegada del poeta Antonin Artaud, quien busca el conocimiento espiritual tarahumara. Rayenari lo introduce al ritual del peyote. Sin embargo, el poeta abandona la ceremonia y pierde una de sus tres almas. Tiempo después, Rayenari descubre a través de los sueños que Artaud se encuentra en un manicomio. Será a través de esta conexión que Rayenari podrá ayudarlo a recuperar lo perdido y él conocerá el destino al que fue llamado.",
@@ -1772,8 +1772,8 @@ const peliculas = {
     "streaming": [],
     "imagen": "https://amacc.org.mx/nominados-ganadores/assets/banners/la-cascadarDfWDxxS.jpg"
   },
-  "LA COCINA": {
-    "director": "ALONSO RUIZPALACIOS",
+  "La cocina": {
+    "director": "Alonso Ruizpalacios",
     "estreno": "2024",
     "duracion": "139 min.",
     "sinopsis": "Es la hora punta del almuerzo en The Grill, una trampa para turistas de Nueva York que atiende a miles de clientes un viernes normal como hoy. Ha desaparecido dinero de la caja y todos los trabajadores están siendo interrogados. La mayoría de ellos son inmigrantes ilegales y luchan por defender su trabajo, el único lugar que les corresponde en el mundo, mientras preparan un sinfín de platos, tratando de seguir el ritmo del flujo constante de pedidos que llegan del comedor. Uno de los cocineros es Pedro, un joven mexicano que busca en la vida algo más que este trabajo. Es un soñador que está enamorado de Julia, una camarera estadounidense que no puede comprometerse en una relación con un extranjero indocumentado. Rashid, el dueño de The Grill, ha prometido ayudar a Pedro con sus papeles. Pero cuando Pedro es acusado de robar el dinero se precipita hacia un acto que detendrá la cadena de producción en la cocina de una vez por todas.",
@@ -2636,7 +2636,7 @@ const peliculas = {
     ],
     "imagen": "https://amacc.org.mx/nominados-ganadores/assets/banners/pedro-paramo4bfZv5UK.jpg"
   },
-  "RITA": {
+  "Rita": {
     "director": "Jayro Bustamante",
     "estreno": "2024",
     "duracion": "106 min.",
@@ -2822,7 +2822,7 @@ const peliculas = {
     "streaming": [],
     "imagen": "https://amacc.org.mx/nominados-ganadores/assets/banners/spiritumeFaAWn5z.jpg"
   },
-  "SUJO": {
+  "Sujo": {
     "director": "Astrid Rondero, Fernanda Valadez",
     "estreno": "2024",
     "duracion": "127 min.",
