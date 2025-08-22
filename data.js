@@ -1881,6 +1881,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-08-27T20:00:00"
+      },
+      {
+        "sede_id": "s73",
+        "timestamp": "2025-08-27T20:00:00"
       }
     ],
     "categoria": [
@@ -2226,6 +2230,10 @@ const peliculas = {
       {
         "sede_id": "s69",
         "timestamp": "2025-09-18T19:00:00"
+      },
+      {
+        "sede_id": "s73",
+        "timestamp": "2025-08-27T15:00:00"
       }
     ],
     "categoria": [
@@ -2569,6 +2577,10 @@ const peliculas = {
       {
         "sede_id": "s50",
         "timestamp": "2025-08-29T16:30:00"
+      },
+      {
+        "sede_id": "s73",
+        "timestamp": "2025-08-27T17:00:00"
       }
     ],
     "categoria": [
@@ -2879,6 +2891,10 @@ const peliculas = {
       {
         "sede_id": "s50",
         "timestamp": "2025-08-29T19:00:00"
+      },
+      {
+        "sede_id": "s73",
+        "timestamp": "2025-08-27T17:30:00"
       }
     ],
     "categoria": [
@@ -3238,6 +3254,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-09-19T20:00:00"
+      },
+      {
+        "sede_id": "s73",
+        "timestamp": "2025-08-27T20:30:00"
       }
     ],
     "categoria": [
@@ -3854,5 +3874,10 @@ const sedes = {
     "nombre": "Librerías Gandhi San Luis Potosí",
     "ubicacion": "Av. Venustiano Carranza 2301-Local 2, Cuauhtemoc, 78260 San Luis Potosí, S.L.P.",
     "estado": "San Luis Potosí"
+  },
+  "s73": {
+    "nombre": "Cineteca Nacional",
+    "ubicacion": "Av. México Coyoacán 389, Xoco, Benito Juárez, 03330 Ciudad de México, CDMX",
+    "estado": "Ciudad de México"
   }
 };
