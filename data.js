@@ -415,6 +415,10 @@ const peliculas = {
       {
         "sede_id": "s01",
         "timestamp": "2025-09-12T18:00:00"
+      },
+      {
+        "sede_id": "s74",
+        "timestamp": "2025-08-27T15:00:00"
       }
     ],
     "categoria": [
@@ -542,7 +546,7 @@ const peliculas = {
         "timestamp": "2025-09-07T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-02T18:00:00"
       }
     ],
@@ -855,6 +859,10 @@ const peliculas = {
       {
         "sede_id": "s50",
         "timestamp": "2025-08-27T16:30:00"
+      },
+      {
+        "sede_id": "s74",
+        "timestamp": "2025-08-27T20:00:00"
       }
     ],
     "categoria": [
@@ -1297,7 +1305,7 @@ const peliculas = {
         "timestamp": "2025-09-17T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
       }
     ],
@@ -1386,7 +1394,7 @@ const peliculas = {
         "timestamp": "2025-09-03T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
       }
     ],
@@ -1685,7 +1693,7 @@ const peliculas = {
         "timestamp": "2025-09-17T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
       }
     ],
@@ -1762,7 +1770,7 @@ const peliculas = {
         "timestamp": "2025-09-10T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
       }
     ],
@@ -2011,8 +2019,12 @@ const peliculas = {
         "timestamp": "2025-09-18T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-03T18:00:00"
+      },
+      {
+        "sede_id": "s74",
+        "timestamp": "2025-08-27T20:00:00"
       }
     ],
     "categoria": [
@@ -2091,6 +2103,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-09-12T20:00:00"
+      },
+      {
+        "sede_id": "s74",
+        "timestamp": "2025-08-27T17:00:00"
       }
     ],
     "categoria": [
@@ -2363,7 +2379,7 @@ const peliculas = {
         "timestamp": "2025-09-13T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-04T18:00:00"
       }
     ],
@@ -2731,7 +2747,7 @@ const peliculas = {
         "timestamp": "2025-09-17T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
       }
     ],
@@ -3092,6 +3108,10 @@ const peliculas = {
       {
         "sede_id": "s70",
         "timestamp": "2025-09-18T17:00:00"
+      },
+      {
+        "sede_id": "s74",
+        "timestamp": "2025-08-27T17:00:00"
       }
     ],
     "categoria": [
@@ -3292,7 +3312,7 @@ const peliculas = {
         "timestamp": "2025-08-27T20:30:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-05T20:00:00"
       }
     ],
@@ -3448,7 +3468,7 @@ const peliculas = {
         "timestamp": "2025-09-10T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
       }
     ],
@@ -3546,7 +3566,7 @@ const peliculas = {
         "timestamp": "2025-09-03T20:00:00"
       },
       {
-        "sede_id": "s74",
+        "sede_id": "s75",
         "timestamp": "2025-09-06T17:30:00"
       }
     ],
@@ -3925,6 +3945,11 @@ const sedes = {
     "estado": "Ciudad de México"
   },
   "s74": {
+    "nombre": "Cineteca Nacional de las Artes",
+    "ubicacion": "Av. Río Churubusco 79, Country Club Churubusco, Coyoacán, 04210 Ciudad de México, CDMX",
+    "estado": "Ciudad de México"
+  },
+  "s75": {
     "nombre": "Cineteca Tijuana",
     "ubicacion": "Cineteca Tijuana - P.º de los Héroes 9350, Zona Urbana Rio Tijuana, 22010 Tijuana, B.C.\nNota: las funciones del 7 de septiembre no están confirmadas por el CECUT.",
     "estado": "Baja California"
