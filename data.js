@@ -76,6 +76,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-09-17T20:00:00"
+      },
+      {
+        "sede_id": "s55",
+        "timestamp": "2025-09-16T19:30:00"
       }
     ],
     "categoria": [
@@ -222,6 +226,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-09-06T20:00:00"
+      },
+      {
+        "sede_id": "s76",
+        "timestamp": "2025-09-04T17:30:00"
       }
     ],
     "categoria": [
@@ -419,6 +427,10 @@ const peliculas = {
       {
         "sede_id": "s74",
         "timestamp": "2025-08-27T15:00:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-17T18:00:00"
       }
     ],
     "categoria": [
@@ -548,6 +560,10 @@ const peliculas = {
       {
         "sede_id": "s75",
         "timestamp": "2025-09-02T18:00:00"
+      },
+      {
+        "sede_id": "s76",
+        "timestamp": "2025-09-11T17:30:00"
       }
     ],
     "categoria": [
@@ -657,6 +673,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-09-17T20:00:00"
+      },
+      {
+        "sede_id": "s55",
+        "timestamp": "2025-09-16T19:30:00"
       }
     ],
     "categoria": [
@@ -837,10 +857,6 @@ const peliculas = {
         "timestamp": "2025-09-03T20:00:00"
       },
       {
-        "sede_id": "s57",
-        "timestamp": "2025-09-05T18:30:00"
-      },
-      {
         "sede_id": "s63",
         "timestamp": "2025-09-06T19:00:00"
       },
@@ -863,6 +879,10 @@ const peliculas = {
       {
         "sede_id": "s74",
         "timestamp": "2025-08-27T20:00:00"
+      },
+      {
+        "sede_id": "s57",
+        "timestamp": "2025-09-06T18:30:00"
       }
     ],
     "categoria": [
@@ -983,10 +1003,6 @@ const peliculas = {
       {
         "sede_id": "s19",
         "timestamp": "2025-08-09T12:00:00"
-      },
-      {
-        "sede_id": "s45",
-        "timestamp": "2025-08-28T11:00:00"
       },
       {
         "sede_id": "s48",
@@ -1307,6 +1323,10 @@ const peliculas = {
       {
         "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
+      },
+      {
+        "sede_id": "s55",
+        "timestamp": "2025-09-16T19:30:00"
       }
     ],
     "categoria": [
@@ -1519,6 +1539,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-08-31T20:00:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-19T18:00:00"
       }
     ],
     "categoria": [
@@ -1600,6 +1624,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-08-30T20:00:00"
+      },
+      {
+        "sede_id": "s76",
+        "timestamp": "2025-09-19T16:30:00"
       }
     ],
     "categoria": [
@@ -1695,6 +1723,10 @@ const peliculas = {
       {
         "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
+      },
+      {
+        "sede_id": "s55",
+        "timestamp": "2025-09-16T19:30:00"
       }
     ],
     "categoria": [
@@ -1716,10 +1748,6 @@ const peliculas = {
       {
         "sede_id": "s19",
         "timestamp": "2025-08-09T12:00:00"
-      },
-      {
-        "sede_id": "s45",
-        "timestamp": "2025-08-28T11:00:00"
       },
       {
         "sede_id": "s52",
@@ -1772,6 +1800,10 @@ const peliculas = {
       {
         "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-18T18:00:00"
       }
     ],
     "categoria": [
@@ -2197,6 +2229,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-09-03T20:00:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-19T18:00:00"
       }
     ],
     "categoria": [
@@ -2274,6 +2310,10 @@ const peliculas = {
       {
         "sede_id": "s73",
         "timestamp": "2025-08-27T15:00:00"
+      },
+      {
+        "sede_id": "s76",
+        "timestamp": "2025-09-17T17:10:00"
       }
     ],
     "categoria": [
@@ -2416,10 +2456,6 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-08-14T20:00:00"
-      },
-      {
-        "sede_id": "s45",
-        "timestamp": "2025-08-28T11:00:00"
       },
       {
         "sede_id": "s51",
@@ -2625,6 +2661,14 @@ const peliculas = {
       {
         "sede_id": "s73",
         "timestamp": "2025-08-27T17:00:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-15T18:00:00"
+      },
+      {
+        "sede_id": "s76",
+        "timestamp": "2025-09-16T16:40:00"
       }
     ],
     "categoria": [
@@ -2749,6 +2793,14 @@ const peliculas = {
       {
         "sede_id": "s75",
         "timestamp": "2025-09-07T18:00:00"
+      },
+      {
+        "sede_id": "s55",
+        "timestamp": "2025-09-16T19:30:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-17T18:00:00"
       }
     ],
     "categoria": [
@@ -2774,10 +2826,6 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-08-17T20:00:00"
-      },
-      {
-        "sede_id": "s45",
-        "timestamp": "2025-08-28T11:00:00"
       },
       {
         "sede_id": "s48",
@@ -3022,7 +3070,7 @@ const peliculas = {
     "director": "Javier Van de Couter",
     "estreno": "2024",
     "duracion": "113 min.",
-    "sinopsis": "Una mujer trans ocupa el espacio que se ganó. Es actriz, es prestigiosa, está casada, gana dinero y se lanza a adoptar un hijo. Éxito laboral y personal, el sueño parece completo, la utopía familiar. La protagonista se desliza por esta tesis construyendo una nueva narrativa travesti que incluye el derecho al goce, la ambición, el glamour, la contradicción. ¿Cuál es el costo de sostener esta nueva e inesperada realidad?",
+    "sinopsis": "Una travesti ocupa el espacio que se ganó. Es actriz, es prestigiosa, gana dinero, se casa y  se lanza a adoptar un hijo. Éxito laboral y personal, el sueño parece completo: la utopía familiar. La protagonista se desliza por esta tesis construyendo una nueva narrativa travesti que  incluye el derecho al goce, la ambición, el glamour, la contradicción. Pero, ¿cuál es el costo de sostener esta nueva e inesperada realidad?",
     "proyecciones": [
       {
         "sede_id": "s52",
@@ -3314,6 +3362,10 @@ const peliculas = {
       {
         "sede_id": "s75",
         "timestamp": "2025-09-05T20:00:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-18T18:00:00"
       }
     ],
     "categoria": [
@@ -3334,7 +3386,7 @@ const peliculas = {
   "Una historia de amor y guerra": {
     "director": "Santiago Mohar Volkow",
     "estreno": "2024",
-    "sinopsis": "Pepe Sanchez Campo está en el mejor momento de su vida. Su corrupto negocio inmobiliario está despegando y se encuentra a punto de casarse con el amor de su vida, la aristócrata Constanza. Sin embargo, su suerte está por cambiar. Su obra es tomada por una guerrilla campesina que exige justicia y el día de su despedida de soltero, los mismos guerrilleros lo secuestran para someterlo a un juicio popular. Basada simbólicamente en la desgracia que sufrieron en México los antiguos emperadores Maximiliano y Carlota de Habsburgo, la película dramatiza la ejecución imaginaria de siglos de colonialismo, encarnada en un criminal empresario enamorado, cuyo destino se ve alterado por la irrupción de la violencia política y las pasiones humanas.",
+    "sinopsis": "Si se pudiera confeccionar todo lo indigno, malicioso, corrupto y ruin de ésta bella nación, los Estados Unidos Mexicanos, conoceríamos al Licenciado Pepe Sánchez Campo; un ávido constructor y emblemático lechón ario que se aventura a conseguir fondos para su siguiente gran sacrilegio nacional: El Mictlán. Un centro comercial diseñado para nacer, vivir y morir aislado de los terrores del mundo exterior. Después de presentar la idea a un grupo de inversionistas, el Licenciado pasa por su amada Constanza y un retén de narcotraficantes los secuestra. Matan a Pepe en medio de la carretera. Su amada corre despavorida, los narcotraficantes la capturan y revelan la pesada broma que su novio organizó para pedirle su mano en santo matrimonio, ella acepta.  El Licenciado Pepe Sánchez Campo y su amada no encuentran buena fortuna al dar la noticia a la familia: Teo, el primo de Constanza con quién tiene un amorío, se desborda en lágrimas; el suegro de Pepe se dispara en la cabeza en medio de la cena al escuchar la noticia. En el funeral de su suegro, Pepe recibe una llamada de su mano derecha: Jopita. Una guerrilla ha tomado el terreno de la construcción para el Mictlán. Junto con Jopa, y seis asesores, Pepe se arma de valor y plomo para recuperar el terreno. La guerrilla los somete, y bajo el mando de Engels García, un revolucionario profesor de secundaria, les sugiere dejar en paz las tierras que no les pertenecen. Pepe y su escuadrón sobornan a un diputado a punta de billetazos (literalmente) y les da el permiso para desalojar ilegalmente el terreno. Pepe contrata a Antonio Muerte, un asesino deprimido, para hacer el trabajo sucio de sacar a los guerrilleros del terreno.  Un grupo de paramilitares encabezados por Toño Muerte desaloja el terreno a punta de pistola. Constanza disfruta de su despedida de soltera con un show sorpresa de stripers. Pepe renta una mansión en Acapulco que sucumbe en un auténtico bacanal de privilegio mexicano: peleas campales, prostitutas y drogas. Teo aprovecha para grabar un video de Pepe con una prostituta, se da cuenta y lo persigue hasta enfrentarlo en combate. Pepe apuñala a Teo con un cuchillo de obsidiana. Jopa y Pepe le roban un coche a unos hippies y se estrellan en la carretera. Jopa muere y el licenciado es secuestrado por la lideresa de la guerrilla: Justina Venganza.  Justina encierra a Pepe en una pequeña choza de concreto, Engels será el encargado de custodiarlo hasta que se dicte la sentencia del pueblo por haber usurpado sus tierras. Teo sobrevive, aunque gravemente herido, y enseña la evidencia de la infidelidad de Pepe a Constanza. En un delirio, Pepe encuentra una pequeña puerta que lo lleva a otra prisión de concreto donde se encuentra a un Anciano que lleva encerrado ahí desde los años setenta. El Anciano le muestra el camino a Pepe, escapa adentrándose en la oscuridad del bosque. Pepe se encuentra con un Xoloitzcuintle parlante que lo lleva en una aventura a través de la historia de México. Pepe amanece en el bosque y es rescatado por Toño Muerte y su escuadrón. La guerrilla comandada por Justina los acorrala, matan a Toño y vuelven a capturar a Pepe. Descubrimos que Constanza está embarazada.  El Pueblo organiza un juicio popular para darle sentencia a los crímenes del Licenciado Pepe Sánchez Campo, se presentan los argumentos de ambas partes. La sentencia se dará al amanecer. Engels no quiere dejar a la suerte el destino de Pepe, lo secuestra en un costal de papas y trata de extorsionar sin éxito a la familia Sánchez. Engels mata a Pepe y lo bota en el río, que por un problema de basura se estanca en el purgatorio: Toluca. Constanza se ve consolada por su primo, Teo, que deformado por la operación, le pide a su prima que se case con él. Pepe se encuentra con el difunto Toño Muerte, que lo lleva a la oficina del perro parlante para pagar su cuota para poder volver a el mundo y detener la incestuosa boda de su amada. Justina encuentra a Engels y lo mata.  Pepe resucita y llega victorioso a la boda de Constanza para detenerla. Justina y sus hombres rodean la iglesia tomando a los invitados como rehenes. Justo antes de dictarle su sentencia, Teo mata a Pepe enfrente de la guerrilla e invitados. Pepe muere, otra vez. Constanza escapa por una escotilla secreta de la iglesia junto con su dama de compañía y el Padre Efraín. Un túnel secreto los lleva hasta la playa, un velero los espera.",
     "duracion": "111 min.",
     "proyecciones": [],
     "categoria": [
@@ -3392,6 +3444,10 @@ const peliculas = {
       {
         "sede_id": "s03",
         "timestamp": "2025-09-11T20:00:00"
+      },
+      {
+        "sede_id": "s76",
+        "timestamp": "2025-09-10T17:20:00"
       }
     ],
     "categoria": [
@@ -3414,10 +3470,6 @@ const peliculas = {
       {
         "sede_id": "s19",
         "timestamp": "2025-08-09T12:00:00"
-      },
-      {
-        "sede_id": "s45",
-        "timestamp": "2025-08-28T11:00:00"
       },
       {
         "sede_id": "s51",
@@ -3568,6 +3620,10 @@ const peliculas = {
       {
         "sede_id": "s75",
         "timestamp": "2025-09-06T17:30:00"
+      },
+      {
+        "sede_id": "s77",
+        "timestamp": "2025-09-15T18:00:00"
       }
     ],
     "categoria": [
@@ -3953,5 +4009,15 @@ const sedes = {
     "nombre": "Cineteca Tijuana",
     "ubicacion": "Cineteca Tijuana - P.º de los Héroes 9350, Zona Urbana Rio Tijuana, 22010 Tijuana, B.C.\nNota: las funciones del 7 de septiembre no están confirmadas por el CECUT.",
     "estado": "Baja California"
+  },
+  "s76": {
+    "nombre": "Cinema Nahual",
+    "ubicacion": "José Azueta 14, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver.",
+    "estado": "Veracruz"
+  },
+  "s77": {
+    "nombre": "Cine Universitario UACJ",
+    "ubicacion": "S. Mejía 445, La Plata, Zona Pronaf Condominio La Plata, 32315 Juárez, Chih.",
+    "estado": "Chihuahua"
   }
 };
