@@ -170,8 +170,31 @@ th {
   }
 
   .tabs {
-    flex-direction: column;
-    gap: 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tabs button[onclick*="showTab"] {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tabs button[onclick*="showTab"] .tab-text {
+    display: none;
+  }
+
+  .tabs button[onclick*="window.open"] {
+    flex: none;
+    width: 340px;
+    margin-top: 8px;
   }
   
   #fechaFiltrosContainer {
@@ -199,4 +222,62 @@ th {
   .info-container div:last-child {
     text-align: left;
   }
+}
+/* =================================
+   Guía de TV
+   ================================= */
+.guia-dia-header {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ff5d00;
+  color: #333;
+}
+
+.tv-programa {
+  display: flex;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.tv-hora-canal {
+  flex-shrink: 0;
+  width: 120px;
+  padding-right: 15px;
+  border-right: 1px solid #f0f0f0;
+  text-align: right;
+}
+
+.tv-hora {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.tv-canal {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.tv-info {
+  flex-grow: 1;
+  padding-left: 15px;
+}
+
+.tv-titulo {
+  font-weight: bold;
+}
+
+.tv-descripcion {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 4px;
+}
+
+#guiaTvContainer a {
+  color: inherit;
+  text-decoration: none;
 }
