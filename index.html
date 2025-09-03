@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎬 Rumbo al Ariel 2025</title>
-  <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>🎬 Rumbo al Ariel 2025</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h2>🎬 Rumbo al Ariel 2025</h2>
+	<h2>🎬 Rumbo al Ariel 2025</h2>
 
 	<div class="tabs">
-	  <button onclick="showTab('fechaTab')">📅 Buscar por fecha y estado</button>
-	  <button onclick="showTab('peliculaTab')">🎞️ Buscar por película</button>
-	  <button onclick="showTab('textoTab')">🔎 Búsqueda libre</button>
-	  <button onclick="showTab('sedeTab')">📍 Buscar por sede</button>
-	  <button onclick="showTab('categoriaTab')">🏆 Buscar por categoría</button>
-	  <button onclick="window.open('files/premioariel.pdf', '_blank')">📝 Quiniela Ariel</button>
+		<button onclick="showTab('fechaTab')">📅<span class="tab-text"> Buscar por fecha y estado</span></button>
+		<button onclick="showTab('peliculaTab')">🎞️<span class="tab-text"> Buscar por película</span></button>
+		<button onclick="showTab('textoTab')">🔎<span class="tab-text"> Búsqueda libre</span></button>
+		<button onclick="showTab('sedeTab')">📍<span class="tab-text"> Buscar por sede</span></button>
+		<button onclick="showTab('categoriaTab')">🏆<span class="tab-text"> Buscar por categoría</span></button>
+		<button onclick="showTab('tvTab')">📺<span class="tab-text"> Guía de TV</span></button>
+		<button onclick="window.open('files/premioariel.pdf', '_blank')">📝<span class="tab-text"> Quiniela Ariel</span></button>
 	</div>
 
-<div id="fechaTab" class="tab active">
-  <h3>Buscar por fecha y estado</h3>
-  <div class="filtros-container">
-    
-    <div id="fechaFiltrosContainer">
-      <div class="input-group">
-        <label for="fechaSelect">Fecha:</label>
-        <select id="fechaSelect" onchange="toggleCheckboxVisibilidad()"></select>
-      </div>
-      <div id="checkboxOcultarContainer">
-        <input type="checkbox" id="ocultarPasadas" checked>
-        <label for="ocultarPasadas">Ocultar funciones pasadas</label>
-      </div>
-    </div>
+	<div id="fechaTab" class="tab active">
+		<h3>Buscar por fecha y estado</h3>
+		<div class="filtros-container">
+			<div id="fechaFiltrosContainer">
+				<div class="input-group">
+					<label for="fechaSelect">Fecha:</label>
+					<select id="fechaSelect" onchange="toggleCheckboxVisibilidad()"></select>
+				</div>
+				<div id="checkboxOcultarContainer">
+					<input type="checkbox" id="ocultarPasadas" checked>
+					<label for="ocultarPasadas">Ocultar funciones pasadas</label>
+				</div>
+			</div>
+			<div class="input-group">
+				<label for="estadoSelect">Estado:</label>
+				<select id="estadoSelect"></select>
+			</div>
+		</div>
+		<button onclick="buscarFechaEstado()">Buscar</button>
+	</div>
 
-    <div class="input-group">
-      <label for="estadoSelect">Estado:</label>
-      <select id="estadoSelect"></select>
-    </div>
+	<div id="textoTab" class="tab">
+		<h3>Búsqueda libre</h3>
+		<label for="textoInput">Buscar por película, sede o dirección:</label>
+		<input type="text" id="textoInput" placeholder="Ej: La Cocina, Metro Zapata, Coyoacán...">
+		<button onclick="buscarPorTexto()">Buscar</button>
+	</div>
 
-  </div>
-  
-  <button onclick="buscarFechaEstado()">Buscar</button>
-</div>
+	<div id="peliculaTab" class="tab">
+		<h3>Buscar por película</h3>
+		<select id="peliculaSelect"></select>
+		<button onclick="buscarPelicula()">Buscar</button>
+	</div>
 
-<div id="textoTab" class="tab">
-  <h3>Búsqueda libre</h3>
-  <label for="textoInput">Buscar por película, sede o dirección:</label>
-  <input type="text" id="textoInput" placeholder="Ej: La Cocina, Metro Zapata, Coyoacán...">
-  <button onclick="buscarPorTexto()">Buscar</button>
-</div>
+	<div id="sedeTab" class="tab">
+		<h3>Buscar por sede</h3>
+		<select id="estadoSedeSelect" onchange="actualizarSedesPorEstado()"></select>
+		<select id="sedeSelect"></select>
+		<button onclick="buscarPorSede()">Buscar</button>
+	</div>
 
-<div id="peliculaTab" class="tab">
-    <h3>Buscar por película</h3>
-    <select id="peliculaSelect"></select>
-    <button onclick="buscarPelicula()">Buscar</button>
-  </div>
+	<div id="categoriaTab" class="tab">
+		<h3>Buscar por categoría</h3>
+		<select id="categoriaSelect" onchange="resetCategoriaBoton()"></select>
+		<button id="categoriaBtn" onclick="buscarPorCategoria()">Buscar</button>
+	</div>
 
-  <div id="sedeTab" class="tab">
-    <h3>Buscar por sede</h3>
-    <select id="estadoSedeSelect" onchange="actualizarSedesPorEstado()"></select>
-    <select id="sedeSelect"></select>
-    <button onclick="buscarPorSede()">Buscar</button>
-  </div>
+	<div id="tvTab" class="tab">
+		<h3>Guía de TV</h3>
+		<div id="guiaTvContainer"></div>
+	</div>
 
-  <div id="categoriaTab" class="tab">
-    <h3>Buscar por categoría</h3>
-    <select id="categoriaSelect" onchange="resetCategoriaBoton()"></select>
-    <button id="categoriaBtn" onclick="buscarPorCategoria()">Buscar</button>
-  </div>
+	<div id="peliculaInfoContainer"></div>
 
-  </div>
+	<div class="table-container">
+		<table id="resultadosTable"></table>
+	</div>
 
-  <div id="peliculaInfoContainer"></div>
-
-  <div class="table-container">
-    <table id="resultadosTable"></table>
-  </div>
-  
-  <div class="table-container">
-    <table id="resultadosTable"></table>
-  </div>
-
-  <script src="data.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-  <script src="app.js"></script>
+	<script src="data.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>
