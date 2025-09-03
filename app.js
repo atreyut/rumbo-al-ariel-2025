@@ -85,6 +85,9 @@ function showTab(tabId) {
   if (tabId === 'categoriaTab') {
     resetCategoriaBoton();
   }
+  if (tabId === 'tvTab') {
+    mostrarGuiaTV();
+  }
 }
 
 /**
@@ -181,7 +184,7 @@ function prepararDatosParaBusqueda() {
 /**
  * Convierte un timestamp a un objeto con formatos de fecha y hora.
  * @param {number} ts El timestamp a convertir.
- * @returns {{fecha: string, hora: string, fechaISO: string}}
+ * @returns {{fecha: string, fechaConDia: string, hora: string, fechaISO: string}}
  */
 function timestampToFechaHora(ts) {
   const d = new Date(ts);
@@ -189,8 +192,15 @@ function timestampToFechaHora(ts) {
   const month = (d.getMonth() + 1).toString().padStart(2, "0");
   const day = d.getDate().toString().padStart(2, "0");
 
+  const fechaConFormatoDia = d.toLocaleDateString("es-MX", {
+    weekday: 'long',
+    day: "numeric",
+    month: "long"
+  });
+
   return {
     fecha: d.toLocaleDateString("es-MX", { day: "2-digit", month: "long", year: "numeric" }),
+    fechaConDia: fechaConFormatoDia.charAt(0).toUpperCase() + fechaConFormatoDia.slice(1),
     hora: `${d.getHours().toString().padStart(2, "0")}:${d.getMinutes().toString().padStart(2, "0")} hrs.`,
     fechaISO: `${year}-${month}-${day}`
   };
@@ -492,19 +502,80 @@ function verPeliculaDesdeCategoria(titulo) {
 }
 
 /**
+ * Muestra la programación de TV, agrupada por día.
+ */
+function mostrarGuiaTV() {
+  const container = document.getElementById('guiaTvContainer');
+  const ahora = new Date();
+
+  const programasFuturos = tv
+    .filter(p => new Date(p.timestamp) >= ahora)
+    .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
+  if (programasFuturos.length === 0) {
+    container.innerHTML = "<p>No hay programas de TV anunciados para el futuro.</p>";
+    return;
+  }
+
+  let finalHTML = "";
+  let fechaAnterior = "";
+
+  programasFuturos.forEach(p => {
+    const { fechaConDia, hora } = timestampToFechaHora(p.timestamp);
+
+    if (fechaConDia !== fechaAnterior) {
+      fechaAnterior = fechaConDia;
+      // Y lo mostramos en el encabezado
+      finalHTML += `<h4 class="guia-dia-header">${fechaConDia}</h4>`;
+    }
+
+    let canalHTML = "";
+    if (p.canal && p.canal.link) {
+      canalHTML = `<a href="${p.canal.link}" target="_blank">${escapeHtml(p.canal.nombre)}</a>`;
+    } else {
+      const nombreCanal = (typeof p.canal === 'object') ? p.canal.nombre : p.canal;
+      canalHTML = escapeHtml(nombreCanal);
+    }
+    const duracionHTML = p.duracion ? ` &bull; ${escapeHtml(p.duracion)}` : '';
+
+    finalHTML += `
+      <div class="tv-programa">
+        <div class="tv-hora-canal">
+          <div class="tv-hora">${hora.replace(' hrs.', '')}</div>
+          <div class="tv-canal">${canalHTML}${duracionHTML}</div>
+        </div>
+        <div class="tv-info">
+          <div class="tv-titulo">${p.titulo ? escapeHtml(p.titulo) : 'Rumbo al Ariel 2025'}</div>
+          <div class="tv-descripcion">${formatMultiline(p.descripcion)}</div>
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = finalHTML;
+}
+
+/**
  * Procesa parámetros en el hash de la URL para enlaces directos.
+ * Ejemplo: https://atreyut.github.io/rumbo-al-ariel-2025/#tab=fechaTab&q=2025-08-27
+ *                                                       "#tab=fechaTab&q=Todas&q2=Ciudad%20de%20México
+ *                                                       "#tab=peliculaTab&q=El%20Guardián%20de%20las%20Monarcas
+ *                                                       "#tab=sedeTab&q=s73
+ *                                                       "#tab=categoriaTab&q=Mejor%20Cortometraje%20de%20Animación
  */
 function procesarHashURL() {
   if (!window.location.hash) return;
 
   const params = new URLSearchParams(window.location.hash.substring(1));
   const tabId = params.get('tab');
+
+  if (!tabId) return;
+  showTab(tabId);
+
   const query = params.get('q');
   const query2 = params.get('q2');
 
-  if (!tabId || !query) return;
-
-  showTab(tabId);
+  if (!query) return;
 
   switch (tabId) {
     case 'peliculaTab':
@@ -517,14 +588,24 @@ function procesarHashURL() {
       toggleCheckboxVisibilidad();
       buscarFechaEstado();
       break;
+
     case 'sedeTab':
-      if (query2) {
-        document.getElementById('estadoSedeSelect').value = query;
+      const sedeId = query;
+      
+      if (sedeId && sedes[sedeId]) {
+        const sede = sedes[sedeId];
+        const estadoNombre = sede.estado;
+
+        document.getElementById('estadoSedeSelect').value = estadoNombre;
+
         actualizarSedesPorEstado();
-        document.getElementById('sedeSelect').value = query2;
+
+        document.getElementById('sedeSelect').value = sedeId;
+
         buscarPorSede();
       }
       break;
+
     case 'categoriaTab':
       document.getElementById('categoriaSelect').value = query;
       buscarPorCategoria();
@@ -541,8 +622,7 @@ fillDropdowns();
 inicializarBusqueda();
 toggleCheckboxVisibilidad();
 procesarHashURL();
-
-// Añade el listener para la búsqueda por texto con la tecla Enter
+window.addEventListener('hashchange', procesarHashURL); 
 document.getElementById('textoInput').addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
     event.preventDefault();
