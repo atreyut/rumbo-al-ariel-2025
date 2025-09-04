@@ -3854,7 +3854,7 @@ const sedes = {
   },
   s38: {
     nombre: "ARTEFAKTA",
-    ubicacion: "Proyecciones itinerantes en el Centro Histórico de la Ciudad de México.\nFunción del 21 de agosto: La Chicha CCEMx, República de Guatemala 18, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06020 Ciudad de México, CDMX.\nPara más información, revisar @artefakta_mx en Instagram.",
+    ubicacion: "Proyecciones itinerantes en el Centro Histórico de la Ciudad de México.\nFunción del 4 de septiembre: Andador San Jerónimo, San Jerónimo 61, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06080 Centro, CDMX.\nPara más información, revisar @artefakta_mx en Instagram.",
     estado: "Ciudad de México",
   },
   s39: {
