@@ -81,6 +81,10 @@ const peliculas = {
         sede_id: "s55",
         timestamp: "2025-09-16T19:30:00",
       },
+      {
+        sede_id: "s73",
+        timestamp: "2025-09-04T19:30:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Animación",
@@ -365,6 +369,10 @@ const peliculas = {
       {
         sede_id: "s03",
         timestamp: "2025-09-03T20:00:00",
+      },
+      {
+        sede_id: "s73",
+        timestamp: "2025-09-04T19:30:00",
       },
     ],
     categoria: [
@@ -1336,6 +1344,10 @@ const peliculas = {
         sede_id: "s55",
         timestamp: "2025-09-16T19:30:00",
       },
+      {
+        sede_id: "s73",
+        timestamp: "2025-09-04T19:30:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Animación",
@@ -1735,6 +1747,10 @@ const peliculas = {
       {
         sede_id: "s55",
         timestamp: "2025-09-16T19:30:00",
+      },
+      {
+        sede_id: "s73",
+        timestamp: "2025-09-04T19:30:00",
       },
     ],
     categoria: [
@@ -2241,6 +2257,10 @@ const peliculas = {
       {
         sede_id: "s77",
         timestamp: "2025-09-19T18:00:00",
+      },
+      {
+        sede_id: "s73",
+        timestamp: "2025-09-04T19:30:00",
       },
     ],
     categoria: [
