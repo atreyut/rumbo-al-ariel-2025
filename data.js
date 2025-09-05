@@ -444,6 +444,10 @@ const peliculas = {
         sede_id: "s78",
         timestamp: "2025-09-04T19:00:00",
       },
+      {
+        sede_id: "s81",
+        timestamp: "2025-09-18T18:00:00",
+      },
     ],
     categoria: [
       "Mejor Largometraje Documental",
@@ -1564,6 +1568,10 @@ const peliculas = {
         sede_id: "s77",
         timestamp: "2025-09-19T18:00:00",
       },
+      {
+        sede_id: "s81",
+        timestamp: "2025-09-19T18:00:00",
+      },
     ],
     categoria: [
       "Mejores Efectos Visuales",
@@ -1648,6 +1656,10 @@ const peliculas = {
       {
         sede_id: "s76",
         timestamp: "2025-09-19T16:30:00",
+      },
+      {
+        sede_id: "s81",
+        timestamp: "2025-09-17T18:00:00",
       },
     ],
     categoria: [
@@ -1969,6 +1981,10 @@ const peliculas = {
       {
         sede_id: "s71",
         timestamp: "2025-09-10T18:00:00",
+      },
+      {
+        sede_id: "s81",
+        timestamp: "2025-09-17T20:00:00",
       },
     ],
     categoria: [
@@ -2702,6 +2718,10 @@ const peliculas = {
         sede_id: "s76",
         timestamp: "2025-09-16T16:40:00",
       },
+      {
+        sede_id: "s81",
+        timestamp: "2025-09-19T20:00:00",
+      },
     ],
     categoria: [
       "Mejor Película",
@@ -3028,6 +3048,10 @@ const peliculas = {
         sede_id: "s73",
         timestamp: "2025-08-27T17:30:00",
       },
+      {
+        sede_id: "s81",
+        timestamp: "2025-09-18T20:00:00",
+      },
     ],
     categoria: [
       "Mejor Película",
@@ -3300,6 +3324,10 @@ const peliculas = {
       {
         sede_id: "s03",
         timestamp: "2025-09-14T20:00:00",
+      },
+      {
+        sede_id: "s81",
+        timestamp: "2025-09-19T16:00:00",
       },
     ],
     categoria: [
@@ -4086,6 +4114,11 @@ const sedes = {
     nombre: "Biblioteca Los Mangos",
     ubicacion: "Av. Francisco Villa 1001, LOS MANGOS, 48310 Puerto Vallarta, Jal.",
     estado: "Jalisco",
+  },
+  s81: {
+    nombre: "Cineteca Sonora",
+    ubicacion: "Av. Dr. Pesqueira & Calle Comonfort, El Centenario, 83260 Hermosillo, Son.",
+    estado: "Sonora",
   },
 };
 
