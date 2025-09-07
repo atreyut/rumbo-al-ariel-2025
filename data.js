@@ -539,7 +539,7 @@ const peliculas = {
       },
       {
         sede_id: "s61",
-        timestamp: "2025-09-06T17:00:00",
+        timestamp: "2025-09-06T19:00:00",
       },
       {
         sede_id: "s65",
@@ -1542,7 +1542,7 @@ const peliculas = {
       },
       {
         sede_id: "s61",
-        timestamp: "2025-09-06T19:00:00",
+        timestamp: "2025-09-06T17:00:00",
       },
       {
         sede_id: "s57",
@@ -4171,7 +4171,7 @@ const tv = [
     timestamp: "2025-09-07T23:00:00",
     duracion: "60 min.",
     titulo: null,
-    descripcion: "",
+    descripcion: "Todos los 15 cortometrajes nominados en las categorías ficción, documental y animación",
   },
   {
     canal: {
@@ -4182,5 +4182,15 @@ const tv = [
     duracion: "60 min.",
     titulo: "Corte y queda: Rumbo al Ariel (RX)",
     descripcion: "Capítulo 4: Cortos de animación (Retransmisión)\nAferrado (Esteban Azuela, 18 min.)\nFulgores (Andrés Palma Celorio, 20 min.)",
+  },
+  {
+    canal: {
+      nombre: "Canal Once",
+      link: "https://canalonce.mx/en-vivo",
+    },
+    timestamp: "2025-09-13T17:30:00",
+    duracion: "90 min.",
+    titulo: "Rumbo al Ariel 2025: Cortometraje documental",
+    descripcion: "Cinco cortometrajes de documental nominados al Premio Ariel en su edición número 67:\nAnónima inmensidad, dir. Paulina del Paso\nBuscando un burro, dir. Juan Vicente Manrique\nHasta encontrarlos, dir. Jean Chapiro Uziel\nMutsk Wuäjxtë’ (Pequeños zorros), dir. Ximena Guzmán, Balam Toscano\nVientre de luna, dir. Liliana Guadalupe López López",
   },
 ];
