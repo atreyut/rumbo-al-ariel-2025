@@ -4161,7 +4161,7 @@ const tv = [
     timestamp: "2025-09-06T17:00:00",
     duracion: "90 min.",
     titulo: null,
-    descripcion: "Cinco cortometrajes de documental nominados al Premio Ariel en su edición número 67:\nAnónima inmensidad, dir. Paulina del Paso\nBuscando un burro, dir. Juan Vicente Manrique\nHasta encontrarlos, dir. Jean Chapiro Uziel\nMutsk Wuäjxtë’ (Pequeños zorros), dir. Ximena Guzmán, Balam Toscano\nVientre de luna, dir. Liliana Guadalupe López López\n\nNota: Es ambiguo si será documental o ficción",
+    descripcion: "Cinco cortometrajes de ficción nominados al Premio Ariel en su edición número 67.",
   },
   {
     canal: {
@@ -4171,17 +4171,27 @@ const tv = [
     timestamp: "2025-09-07T23:00:00",
     duracion: "60 min.",
     titulo: null,
-    descripcion: "Todos los 15 cortometrajes nominados en las categorías ficción, documental y animación",
+    descripcion: "Los 15 cortometrajes nominados de este año: ficción, documental y animación",
   },
   {
     canal: {
       nombre: "Capital 21",
-      link: "https://mxplus.tv/television/canal-21",
+      link: "https://www.capital21.cdmx.gob.mx/",
     },
     timestamp: "2025-09-08T18:00:00",
     duracion: "60 min.",
     titulo: "Corte y queda: Rumbo al Ariel (RX)",
-    descripcion: "Capítulo 4: Cortos de animación (Retransmisión)\nAferrado (Esteban Azuela, 18 min.)\nFulgores (Andrés Palma Celorio, 20 min.)",
+    descripcion: "En Corte y queda exploramos los cortometrajes galardonados y descubrimos historias, emociones y visiones que solo el cine mexicano puede contarnos.\nCapítulo 4 (Retransmisión)\nAferrado (Esteban Azuela, 18 min.)\nFulgores (Andrés Palma Celorio, 20 min.)",
+  },
+  {
+    canal: {
+      nombre: "Capital 21",
+      link: "https://www.capital21.cdmx.gob.mx/",
+    },
+    timestamp: "2025-09-12T23:00:00",
+    duracion: "60 min.",
+    titulo: "Corte y queda: Rumbo al Ariel",
+    descripcion: "En Corte y queda exploramos los cortometrajes galardonados y descubrimos historias, emociones y visiones que solo el cine mexicano puede contarnos.\nCapítulo 5\nVientre de luna (Liliana K'an, 30 min.)\nSer semilla (Julia Granillo Tostado, 5 min.)",
   },
   {
     canal: {
@@ -4191,6 +4201,16 @@ const tv = [
     timestamp: "2025-09-13T17:30:00",
     duracion: "90 min.",
     titulo: "Rumbo al Ariel 2025: Cortometraje documental",
-    descripcion: "Cinco cortometrajes de documental nominados al Premio Ariel en su edición número 67:\nAnónima inmensidad, dir. Paulina del Paso\nBuscando un burro, dir. Juan Vicente Manrique\nHasta encontrarlos, dir. Jean Chapiro Uziel\nMutsk Wuäjxtë’ (Pequeños zorros), dir. Ximena Guzmán, Balam Toscano\nVientre de luna, dir. Liliana Guadalupe López López",
+    descripcion: "Cinco cortometrajes de documental nominados al Premio Ariel en su edición número 67:\nAnónima inmensidad (Paulina del Paso, 16 min.)\nBuscando un burro (Juan Vicente Manrique, 17 min.)\nHasta encontrarlos (Jean Chapiro Uziel, 19 min.)\nMutsk Wuäjxtë’ (Pequeños zorros) (Ximena Guzmán y Balam Toscano, 6 min.)\nVientre de luna (Liliana Guadalupe López López, 30 min.)",
+  },
+  {
+    canal: {
+      nombre: "Capital 21",
+      link: "https://www.capital21.cdmx.gob.mx/",
+    },
+    timestamp: "2025-09-15T18:00:00",
+    duracion: "60 min.",
+    titulo: "Corte y queda: Rumbo al Ariel RX",
+    descripcion: "En Corte y queda exploramos los cortometrajes galardonados y descubrimos historias, emociones y visiones que solo el cine mexicano puede contarnos.\nCapítulo 5 (Repetición)\nVientre de luna (Liliana K'an, 30 min.)\nSer semilla (Julia Granillo Tostado, 5 min.)",
   },
 ];
