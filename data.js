@@ -85,6 +85,10 @@ const peliculas = {
         sede_id: "s73",
         timestamp: "2025-09-04T19:30:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-14T16:00:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Animación",
@@ -289,11 +293,24 @@ const peliculas = {
         sede_id: "s64",
         timestamp: "2025-09-13T19:00:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-14T20:00:00",
+      },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-17T17:00:00",
+      },
     ],
     categoria: [
       "Mejor Revelación Actoral",
     ],
-    streaming: [],
+    streaming: [
+      {
+        servicio: "renta",
+        link: "https://www.nuestrocine.mx/detail/2917",
+      },
+    ],
     imagen: "https://amacc.org.mx/nominados-ganadores/assets/banners/armas-blancasEp2fqVCS.jpg",
   },
   "Buscando un burro": {
@@ -448,6 +465,10 @@ const peliculas = {
         sede_id: "s81",
         timestamp: "2025-09-18T18:00:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-16T18:30:00",
+      },
     ],
     categoria: [
       "Mejor Largometraje Documental",
@@ -581,6 +602,14 @@ const peliculas = {
         sede_id: "s76",
         timestamp: "2025-09-11T17:30:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-12T20:00:00",
+      },
+      {
+        sede_id: "s84",
+        timestamp: "2025-09-14T15:55:00",
+      },
     ],
     categoria: [
       "Mejor Dirección",
@@ -694,11 +723,20 @@ const peliculas = {
         sede_id: "s55",
         timestamp: "2025-09-16T19:30:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-14T16:00:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Animación",
     ],
-    streaming: [],
+    streaming: [
+      {
+        servicio: "compra y renta en Vimeo",
+        link: "https://vimeo.com/ondemand/dolores2",
+      },
+    ],
     imagen: "https://amacc.org.mx/nominados-ganadores/assets/banners/dolores6NNth2Xh.jpg",
   },
   "el 47": {
@@ -778,6 +816,10 @@ const peliculas = {
       {
         sede_id: "s03",
         timestamp: "2025-09-04T20:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-12T17:00:00",
       },
     ],
     categoria: [
@@ -899,6 +941,10 @@ const peliculas = {
       {
         sede_id: "s57",
         timestamp: "2025-09-06T18:30:00",
+      },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-13T17:00:00",
       },
     ],
     categoria: [
@@ -1068,6 +1114,10 @@ const peliculas = {
         sede_id: "s03",
         timestamp: "2025-09-10T20:00:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-18T17:00:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Ficción",
@@ -1120,6 +1170,10 @@ const peliculas = {
       {
         sede_id: "s68",
         timestamp: "2025-09-18T20:30:00",
+      },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-11T17:00:00",
       },
     ],
     categoria: [
@@ -1352,6 +1406,14 @@ const peliculas = {
         sede_id: "s73",
         timestamp: "2025-09-04T19:30:00",
       },
+      {
+        sede_id: "s84",
+        timestamp: "2025-09-14T14:10:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-14T16:00:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Animación",
@@ -1572,6 +1634,10 @@ const peliculas = {
         sede_id: "s81",
         timestamp: "2025-09-19T18:00:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2015-09-13T18:30:00",
+      },
     ],
     categoria: [
       "Mejores Efectos Visuales",
@@ -1630,6 +1696,10 @@ const peliculas = {
         sede_id: "s03",
         timestamp: "2025-09-05T20:00:00",
       },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-18T17:00:00",
+      },
     ],
     categoria: [
       "Mejor Maquillaje",
@@ -1660,6 +1730,10 @@ const peliculas = {
       {
         sede_id: "s81",
         timestamp: "2025-09-17T18:00:00",
+      },
+      {
+        sede_id: "s80",
+        timestamp: "2025-09-19T19:00:00",
       },
     ],
     categoria: [
@@ -1764,6 +1838,10 @@ const peliculas = {
         sede_id: "s73",
         timestamp: "2025-09-04T19:30:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-14T16:00:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Animación",
@@ -1840,6 +1918,18 @@ const peliculas = {
       {
         sede_id: "s77",
         timestamp: "2025-09-18T18:00:00",
+      },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-11T17:00:00",
+      },
+      {
+        sede_id: "s84",
+        timestamp: "2025-09-13T18:53:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-18T17:00:00",
       },
     ],
     categoria: [
@@ -1986,6 +2076,10 @@ const peliculas = {
         sede_id: "s81",
         timestamp: "2025-09-17T20:00:00",
       },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-10T19:00:00",
+      },
     ],
     categoria: [
       "Mejor Película",
@@ -2098,6 +2192,14 @@ const peliculas = {
         sede_id: "s74",
         timestamp: "2025-08-27T20:00:00",
       },
+      {
+        sede_id: "s85",
+        timestamp: "2025-09-13T18:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-16T20:30:00",
+      },
     ],
     categoria: [
       "Mejor Largometraje Documental",
@@ -2179,6 +2281,10 @@ const peliculas = {
       {
         sede_id: "s74",
         timestamp: "2025-08-27T17:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-13T16:00:00",
       },
     ],
     categoria: [
@@ -2359,6 +2465,10 @@ const peliculas = {
         sede_id: "s76",
         timestamp: "2025-09-17T17:10:00",
       },
+      {
+        sede_id: "s86",
+        timestamp: "2025-09-12T19:00:00",
+      },
     ],
     categoria: [
       "Mejor Película",
@@ -2466,6 +2576,10 @@ const peliculas = {
         sede_id: "s75",
         timestamp: "2025-09-04T18:00:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-17T17:00:00",
+      },
     ],
     categoria: [
       "Mejores Efectos Visuales",
@@ -2548,6 +2662,14 @@ const peliculas = {
       {
         sede_id: "s79",
         timestamp: "2025-09-17T19:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-18T17:00:00",
+      },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-18T17:00:00",
       },
     ],
     categoria: [
@@ -2722,6 +2844,10 @@ const peliculas = {
         sede_id: "s81",
         timestamp: "2025-09-19T20:00:00",
       },
+      {
+        sede_id: "s48",
+        timestamp: "2025-09-13T15:00:00",
+      },
     ],
     categoria: [
       "Mejor Película",
@@ -2854,6 +2980,14 @@ const peliculas = {
         sede_id: "s77",
         timestamp: "2025-09-17T18:00:00",
       },
+      {
+        sede_id: "s84",
+        timestamp: "2025-09-14T15:55:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-14T16:00:00",
+      },
     ],
     categoria: [
       "Mejor Cortometraje de Animación",
@@ -2934,6 +3068,14 @@ const peliculas = {
       {
         sede_id: "s78",
         timestamp: "2025-09-11T19:00:00",
+      },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-13T17:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-18T17:00:00",
       },
     ],
     categoria: [
@@ -3114,6 +3256,10 @@ const peliculas = {
         sede_id: "s66",
         timestamp: "2025-09-09T18:00:00",
       },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-14T19:00:00",
+      },
     ],
     categoria: [
       "Mejor Vestuario",
@@ -3225,6 +3371,10 @@ const peliculas = {
         sede_id: "s78",
         timestamp: "2025-09-18T19:00:00",
       },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-13T20:30:00",
+      },
     ],
     categoria: [
       "Mejor Largometraje Documental",
@@ -3328,6 +3478,14 @@ const peliculas = {
       {
         sede_id: "s81",
         timestamp: "2025-09-19T16:00:00",
+      },
+      {
+        sede_id: "s84",
+        timestamp: "2025-09-14T14:10:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-14T18:00:00",
       },
     ],
     categoria: [
@@ -3435,6 +3593,14 @@ const peliculas = {
         sede_id: "s77",
         timestamp: "2025-09-18T18:00:00",
       },
+      {
+        sede_id: "s84",
+        timestamp: "2025-09-13T18:53:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-17T20:00:00",
+      },
     ],
     categoria: [
       "Mejor Película",
@@ -3521,6 +3687,14 @@ const peliculas = {
         sede_id: "s78",
         timestamp: "2025-09-11T19:00:00",
       },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-12T17:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-18T20:00:00",
+      },
     ],
     categoria: [
       "Mejor Actor",
@@ -3598,6 +3772,10 @@ const peliculas = {
       {
         sede_id: "s80",
         timestamp: "2025-09-19T19:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-18T17:00:00",
       },
     ],
     categoria: [
@@ -3704,6 +3882,14 @@ const peliculas = {
       {
         sede_id: "s78",
         timestamp: "2025-09-18T19:00:00",
+      },
+      {
+        sede_id: "s82",
+        timestamp: "2025-09-13T16:00:00",
+      },
+      {
+        sede_id: "s83",
+        timestamp: "2025-09-17T17:00:00",
       },
     ],
     categoria: [
@@ -4119,6 +4305,31 @@ const sedes = {
     nombre: "Cineteca Sonora",
     ubicacion: "Av. Dr. Pesqueira & Calle Comonfort, El Centenario, 83260 Hermosillo, Son.",
     estado: "Sonora",
+  },
+  s82: {
+    nombre: "Cineteca Nuevo León",
+    ubicacion: "Av Fundidora S/N, Obrera, 64010 Monterrey, Nuevo León.",
+    estado: "Nuevo León",
+  },
+  s83: {
+    nombre: "Cineteca Zacatecas",
+    ubicacion: "Calle Dr. Hierro #303 Centro histórico CP. 98000 Zacatecas, Zac.",
+    estado: "Zacatecas",
+  },
+  s84: {
+    nombre: "Interestela Cinema",
+    ubicacion: "Casa Palma Segundo Piso • 3 Oriente No.213 • Centro Histórico de la Ciudad de Puebla",
+    estado: "Puebla",
+  },
+  s85: {
+    nombre: "Cine Mixteca / Museo Regional de Huajapan de León",
+    ubicacion: "Museo Regional de Huajuapan de León- dirección: Indio de, C. Nuyoó 15, Centro, 69000 Heroica Cdad. de Huajuapan de León, Oax.",
+    estado: "Oaxaca",
+  },
+  s86: {
+    nombre: "Cineclub del Barrio Sede Pensil",
+    ubicacion: "Lago Cupatitzio #79, Col. 5 de Mayo, Alcaldía Miguel Hidalgo",
+    estado: "Ciudad de México",
   },
 };
 
